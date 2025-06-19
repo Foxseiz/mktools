@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36315103-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-36315103-4');
+    </script>
+
+    <title>MK Tools</title>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://cdn.glitch.global/221fa3eb-a4d2-40de-bff4-7796f7d5917c/favicon.ico?v=1679553923215" type="images/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ed2e310181.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/storetables.css"/>
+    <link rel="stylesheet" href="../css/dark-mode.css"/>
+    <!--<script src="../js/login.js" defer></script>-->
+  </head>
+    <body>
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login to Stores</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="loginForm"> <!-- form with an ID so we can identify it, now includes both the textbox and the button within it -->
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="modalpass" class="col-form-label">Password:</label>
+                  <input type="password" name="modalpass" class="form-control" id="modalpass">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+          <nav class="navi-link">
+              <a href="https://mktools.ca" alt="MK Tools">
+                <img class="logo-img" src="https://mobileklinik.ca/wp-content/themes/psc/images/logoNewEnglish.png"/>
+              </a>
+              <ul class="navi-link-2">
+                  <li><a href="https://mktools.ca/">Home</a></li>
+                  <li><a href="/pages/forms.html">Forms</a></li>
+                  <li><a href="/pages/tools.html">Tools</a></li>
+                  <li><a href="/pages/stores.html">Stores</a></li>
+                  <li><a href="/pages/about.html">About</a></li>
+              </ul>
+          </nav>
+          <hr class="nav-line"/>
+      </header>
+      <div class="container">
+          <div class="main">
+              <h3>Mobile Klinik Stores</h3>
+              <div class="table-responsive">
+                <table class="table mk-stores">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th class="w-25" scope="col">Store</th>
+                      <th class="w-50" scope="col">Address1</th>
+                      <th scope="col">Address2</th>
+                      <th scope="col">City</th>
+                      <th scope="col">Province</th>
+                      <th scope="col">Postal</th>
+                      <th class="w-25" scope="col">Phone #</th>
+                      <th scope="col">Email</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">100</th>
+                      <td>St. Laurent</td>
+                      <td>1200 St. Laurent Blvd</td>
+                      <td></td>
+                      <td>Ottawa</td>
+                      <td>ON</td>
+                      <td>K1K 3B8</td>
+                      <td><a href="tel:6137416111">613-741-6111</a></td>
+                      <td><a href="mailto:stlaurent@mobileklinik.ca">stlaurent@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">103</th>
+                      <td>Dundas Suare</td>
+                      <td>10 Dundas Street East</td>
+                      <td>Unit B128</td>
+                      <td>Toronto</td>
+                      <td>ON</td>
+                      <td>M5B 2G9</td>
+                      <td><a href="tel:4162600888">416-260-0888</a></td>
+                      <td><a href="mailto:dundassquare@mobileklinik.ca">dundassquare@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">104</th>
+                      <td>Vaughan Mills</td>
+                      <td>1 Bass Pro Mills Drive</td>
+                      <td>Unit 744</td>
+                      <td>Vaughan</td>
+                      <td>ON</td>
+                      <td>L4K 5W4</td>
+                      <td><a href="tel:9055320922">905-532-0922</a></td>
+                      <td><a href="mailto:vaughanmills@mobileklinik.ca">vaughanmills@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">105</th>
+                      <td>Pen Centre</td>
+                      <td>221 Glendale Avenue</td>
+                      <td>Unit 106C</td>
+                      <td>St. Catharines</td>
+                      <td>ON</td>
+                      <td>L2T 2K9</td>
+                      <td><a href="tel:9056842333">905-684-2333</a></td>
+                      <td><a href="mailto:pencentre@mobileklinik.ca">pencentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">106</th>
+                      <td>Yonge & Eglinton</td>
+                      <td>2300 Yonge Street</td>
+                      <td>Unit K1</td>
+                      <td>Toronto</td>
+                      <td>ON</td>
+                      <td>M4P 1E4</td>
+                      <td><a href="tel:4164852772">416-485-2772</a></td>
+                      <td><a href="mailto:yongeeglinton@mobileklinik.ca">yongeeglinton@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">107</th>
+                      <td>Square One</td>
+                      <td>100 City Centre Drive</td>
+                      <td>Unit 1-846</td>
+                      <td>Mississauga</td>
+                      <td>ON</td>
+                      <td>L5B 2C9</td>
+                      <td><a href="tel:9052769997">905-276-9997</a></td>
+                      <td><a href="mailto:squareone@mobileklinik.ca">squareone@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">108</th>
+                      <td>White Oaks</td>
+                      <td>1105 Wellington Road</td>
+                      <td>Unit 232</td>
+                      <td>London</td>
+                      <td>ON</td>
+                      <td>N6E 1V4</td>
+                      <td><a href="tel:5196910880">519-691-0880</a></td>
+                      <td><a href="mailto:whiteoaks@mobileklinik.ca">whiteoaks@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">109</th>
+                      <td>The Boardwalk</td>
+                      <td>235 The Boardwalk</td>
+                      <td>Unit 7</td>
+                      <td>Kitchener</td>
+                      <td>ON</td>
+                      <td>N2J 3Z4</td>
+                      <td><a href="tel:5194731001">519-473-1001</a></td>
+                      <td><a href="mailto:theboardwalk@mobileklinik.ca">theboardwalk@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">110</th>
+                      <td>Bayshore</td>
+                      <td>100 Bayshore Drive</td>
+                      <td>Unit AA45D</td>
+                      <td>Ottawa</td>
+                      <td>ON</td>
+                      <td>K2B 8C1</td>
+                      <td><a href="tel:6135966430">613-596-6430</a></td>
+                      <td><a href="mailto:bayshore@mobileklinik.ca">bayshore@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">111</th>
+                      <td>Quinte Mall</td>
+                      <td>390 N Front St</td>
+                      <td>Unit 7K09C</td>
+                      <td>Belleville</td>
+                      <td>ON</td>
+                      <td>K8P 3C9</td>
+                      <td><a href="tel:3436000130">343-600-0130</a></td>
+                      <td><a href="mailto:quintemall@mobileklinik.ca">quintemall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">112</th>
+                      <td>Cataraqui Centre</td>
+                      <td>945 Gardiners Road</td>
+                      <td>Unit U02</td>
+                      <td>Kingston</td>
+                      <td>ON</td>
+                      <td>K7M 7H4</td>
+                      <td><a href="tel:3433027520">343-302-7520</a></td>
+                      <td><a href="mailto:cataraquicentre@mobileklinik.ca">cataraquicentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">113</th>
+                      <td>Cambridge</td>
+                      <td>355 Hespeler Road</td>
+                      <td></td>
+                      <td>Cambridge</td>
+                      <td>ON</td>
+                      <td>N1R 6B3</td>
+                      <td><a href="tel:2263180895">226-318-0895</a></td>
+                      <td><a href="mailto:cambridge@mobileklinik.ca">cambridge@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">114</th>
+                      <td>Clair Marketplace</td>
+                      <td>20 Clair Road West</td>
+                      <td>Unit B4-4</td>
+                      <td>Guelph</td>
+                      <td>ON</td>
+                      <td>N1L 0A8</td>
+                      <td><a href="tel:2263142160">226-314-2160</a></td>
+                      <td><a href="mailto:guelph@mobileklinik.ca">guelph@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">115</th>
+                      <td>Devonshire</td>
+                      <td>3100 Howard Avenue</td>
+                      <td>Unit Q12</td>
+                      <td>Windsor</td>
+                      <td>ON</td>
+                      <td>N8X 3Y8</td>
+                      <td><a href="tel:2262162569">226-216-2569</a></td>
+                      <td><a href="mailto:devonshire@mobileklinik.ca">devonshire@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">116</th>
+                      <td>Bramalea City Centre</td>
+                      <td>25 Peel Centre Dr.</td>
+                      <td>Unit 310</td>
+                      <td>Brampton</td>
+                      <td>ON</td>
+                      <td>L6T 3R5</td>
+                      <td><a href="tel:2899482770">289-948-2770</a></td>
+                      <td><a href="mailto:bramalea@mobileklinik.ca">bramalea@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">117</th>
+                      <td>Fiesta Plaza</td>
+                      <td>90 Highway 8</td>
+                      <td>Unit 113C</td>
+                      <td>Stoney Creek</td>
+                      <td>ON</td>
+                      <td>L8G 4H3</td>
+                      <td><a href="tel:9052966751">905-296-6751</a></td>
+                      <td><a href="mailto:fiestamall@mobileklinik.ca">fiestamall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">118</th>
+                      <td>Cloverdale Mall</td>
+                      <td>250 The East Mall</td>
+                      <td>Unit 220</td>
+                      <td>Etobicoke</td>
+                      <td>ON</td>
+                      <td>M9B 3Y8</td>
+                      <td><a href="tel:6473434301">647-343-4301</a></td>
+                      <td><a href="mailto:cloverdalemall@mobileklinik.ca">cloverdalemall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">119</th>
+                      <td>Yonge & Sheppard</td>
+                      <td>4841 Yonge Street</td>
+                      <td>Unit K245</td>
+                      <td>Toronto</td>
+                      <td>ON</td>
+                      <td>M2N 5X2</td>
+                      <td><a href="tel:6474284287">647-428-4287</a></td>
+                      <td><a href="mailto:yongesheppard@mobileklinik.ca">yongesheppard@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">120</th>
+                      <td>Walmart Scarborough West</td>
+                      <td>1900 Eglinton Avenue</td>
+                      <td>Unit 770</td>
+                      <td>Scarborough</td>
+                      <td>ON</td>
+                      <td>M1L 2l9</td>
+                      <td><a href="tel:4168403927">416-840-3927</a></td>
+                      <td><a href="mailto:wmscarboroughw@mobileklinik.ca">wmscarboroughw@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">121</th>
+                      <td>Creekside Crossing</td>
+                      <td>1476 Dundas St. E.</td>
+                      <td>D4 - Unit 11</td>
+                      <td>Mississauga</td>
+                      <td>ON</td>
+                      <td>L4X 1L4</td>
+                      <td><a href="tel:9052674666">905-267-4666</a></td>
+                      <td><a href="mailto:creeksidecrossing@mobileklinik.ca">creeksidecrossing@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">122</th>
+                      <td>Erin Mills Town Center</td>
+                      <td>5100 Erin Mills Parkway</td>
+                      <td>Unit B205</td>
+                      <td>Mississauga</td>
+                      <td>ON</td>
+                      <td>L5M 4Z5</td>
+                      <td><a href="tel:2899978299">289-997-8299</a></td>
+                      <td><a href="mailto:erinmills@mobileklinik.ca">erinmills@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">125</th>
+                      <td>Sherway Gardens</td>
+                      <td>25 The West Mall</td>
+                      <td></td>
+                      <td>Etobicoke</td>
+                      <td>ON</td>
+                      <td>M9C 1B8</td>
+                      <td><a href="tel:4166205411">416-620-5411</a></td>
+                      <td><a href="mailto:sherway@mobileklinik.ca">sherway@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">126</th>
+                      <td>CF Toronto Eaton Centre</td>
+                      <td>220 Yonge Street</td>
+                      <td>Unit Z020A</td>
+                      <td>Toronto</td>
+                      <td>ON</td>
+                      <td>M5B 2H1</td>
+                      <td><a href="tel:4165931512">416-593-1512</a></td>
+                      <td><a href="mailto:torontoeaton@mobileklinik.ca">torontoeaton@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">128</th>
+                      <td>Oshawa Gateway Centre</td>
+                      <td>238 Ritson Road N.</td>
+                      <td></td>
+                      <td>Oshawa</td>
+                      <td>ON</td>
+                      <td>L1G 1Z7</td>
+                      <td><a href="tel:9054329191">905-432-9191</a></td>
+                      <td><a href="mailto:oshawa@mobileklinik.ca">oshawa@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">129</th>
+                      <td>DC Upper Canada Mall</td>
+                      <td>17600 Yonge Street</td>
+                      <td>Unit 14</td>
+                      <td>Newmarket</td>
+                      <td>ON</td>
+                      <td>L3Y 4Z1</td>
+                      <td><a href="tel:9058301525">905-830-1525</a></td>
+                      <td><a href="mailto:dcuppercanada@devicecare.ca">dcuppercanada@devicecare.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">130</th>
+                      <td>Park Place</td>
+                      <td>120 park Place Blvd.</td>
+                      <td>Unit 5B</td>
+                      <td>Barrie</td>
+                      <td>ON</td>
+                      <td>L4N 6P1</td>
+                      <td><a href="tel:7058128193">705-812-8193</a></td>
+                      <td><a href="mailto:parkplace@mobileklinik.ca">parkplace@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">131</th>
+                      <td>Meadowlands</td>
+                      <td>737 Golf Links Road</td>
+                      <td>Unit 4</td>
+                      <td>Ancaster</td>
+                      <td>ON</td>
+                      <td>L9K 1L5</td>
+                      <td><a href="tel:2893460285">289-346-0285</a></td>
+                      <td><a href="mailto:meadowlands@mobileklinik.ca">meadowlands@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">132</th>
+                      <td>Rideau Centre</td>
+                      <td>50 Rideau Street</td>
+                      <td>Unit 0350A</td>
+                      <td>Ottawa</td>
+                      <td>ON</td>
+                      <td>K1N 9J7</td>
+                      <td><a href="tel:6136675607">613-667-5607</a></td>
+                      <td><a href="mailto:rideaucentre@mobileklinik.ca">rideaucentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">133</th>
+                      <td>Walmart Sarnia</td>
+                      <td>1444 Quinn Drive</td>
+                      <td></td>
+                      <td>Sarnia</td>
+                      <td>ON</td>
+                      <td>N7S 6M8</td>
+                      <td><a href="tel:5194790737">519-479-0737</a></td>
+                      <td><a href="mailto:wmsarnia@mobileklinik.ca">wmsarnia@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">135</th>
+                      <td>Fairview Mall</td>
+                      <td>1800 Sheppard Avenue East</td>
+                      <td></td>
+                      <td>North York</td>
+                      <td>ON</td>
+                      <td>M2J 5A7</td>
+                      <td><a href="tel:4167562349">416-756-2349</a></td>
+                      <td><a href="mailto:fairviewmall@mobileklinik.ca">fairviewmall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">136</th>
+                      <td>Lime Ridge Mall</td>
+                      <td>999 Upper Wentworth Street</td>
+                      <td></td>
+                      <td>Hamilton</td>
+                      <td>ON</td>
+                      <td>L9A 4X5</td>
+                      <td><a href="tel:9055742349">905-574-2349</a></td>
+                      <td><a href="mailto:limeridge@mobileklinik.ca">limeridge@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">137</th>
+                      <td>Scarborough Town Centre</td>
+                      <td>300 Borough Dr Lower Level</td>
+                      <td></td>
+                      <td>Scarborough</td>
+                      <td>ON</td>
+                      <td>M1P 4P5</td>
+                      <td><a href="tel:4162969666">416-296-9666</a></td>
+                      <td><a href="mailto:stc@mobileklinik.ca">stc@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">138</th>
+                      <td>Upper Canada Mall</td>
+                      <td>17600 Yonge Street</td>
+                      <td></td>
+                      <td>Newmarket</td>
+                      <td>ON</td>
+                      <td>L3Y 4Z1</td>
+                      <td><a href="tel:9058532349">905-853-2349</a></td>
+                      <td><a href="mailto:ucm@mobileklinik.ca">ucm@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">139</th>
+                      <td>Fairview Park Mall</td>
+                      <td>2960 Kingsway Drive</td>
+                      <td></td>
+                      <td>Kitchener</td>
+                      <td>ON</td>
+                      <td>N2C 1X1</td>
+                      <td><a href="tel:5198962828">519-896-2828</a></td>
+                      <td><a href="mailto:fairviewpark@mobileklinik.ca">fairviewpark@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">140</th>
+                      <td>Oshawa Centre</td>
+                      <td>419 King St. W.</td>
+                      <td></td>
+                      <td>Oshawa</td>
+                      <td>ON</td>
+                      <td>L1J 2K5</td>
+                      <td><a href="tel:9054342349">905-434-2349</a></td>
+                      <td><a href="mailto:oshawacentre@mobileklinik.ca">oshawacentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">141</th>
+                      <td>Conestoga Mall</td>
+                      <td>550 King St. N.</td>
+                      <td></td>
+                      <td>Waterloo</td>
+                      <td>ON</td>
+                      <td>N2L 5W6</td>
+                      <td><a href="tel:5198851919">519-885-1919</a></td>
+                      <td><a href="mailto:conestoga@mobileklinik.ca">conestoga@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">142</th>
+                      <td>Masonville Place</td>
+                      <td>1680 Richmond Street</td>
+                      <td></td>
+                      <td>London</td>
+                      <td>ON</td>
+                      <td>N6G 3Y9</td>
+                      <td><a href="tel:5196722349">519-672-2349</a></td>
+                      <td><a href="mailto:masonville@mobileklinik.ca">masonville@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">143</th>
+                      <td>Walmart Milton</td>
+                      <td>1280 Steeles Ave. E.</td>
+                      <td></td>
+                      <td>Milton</td>
+                      <td>ON</td>
+                      <td>L9T 6R1</td>
+                      <td><a href="tel:4166237292">416-623-7292</a></td>
+                      <td><a href="mailto:wmmilton@mobileklinik.ca">wmmilton@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">144</th>
+                      <td>Walmart Oakville</td>
+                      <td>234 Hays Blvd.</td>
+                      <td></td>
+                      <td>Oakville</td>
+                      <td>ON</td>
+                      <td>L6H 6M4</td>
+                      <td><a href="tel:9059011949">905-901-1949</a></td>
+                      <td><a href="mailto:wmoakville@mobileklinik.ca">wmoakville@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">145</th>
+                      <td>Lansdowne Place</td>
+                      <td>645 Lansdowne St. W.</td>
+                      <td>Unit 152A</td>
+                      <td>Peterborough</td>
+                      <td>ON</td>
+                      <td>K9J 7Y5</td>
+                      <td><a href="tel:7055360757">705-536-0757</a></td>
+                      <td><a href="mailto:landsdown@mobileklinik.ca">landsdown@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">147</th>
+                      <td>Walmart Niagara Falls</td>
+                      <td>7481 Oakwood Drive</td>
+                      <td></td>
+                      <td>Niagara Falls</td>
+                      <td>ON</td>
+                      <td>L2G 0J5</td>
+                      <td><a href="tel:2894776122">289-477-6122</a></td>
+                      <td><a href="mailto:wmniagara@mobileklinik.ca">wmniagara@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">148</th>
+                      <td>Dufferin Mall</td>
+                      <td>900 Dufferin Street</td>
+                      <td>Unit 431</td>
+                      <td>Toronto</td>
+                      <td>ON</td>
+                      <td>M6H 4A9</td>
+                      <td><a href="tel:6474361022">647-436-1022</a></td>
+                      <td><a href="mailto:dufferinmall@mobileklinik.ca">dufferinmall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">152</th>
+                      <td>Station Mall</td>
+                      <td>293 Bay Street</td>
+                      <td>Unit J14</td>
+                      <td>Sault Ste Marie</td>
+                      <td>ON</td>
+                      <td>P6A 1X3</td>
+                      <td><a href="tel:7059083015">705-908-3015</a></td>
+                      <td><a href="mailto:stationmall@mobileklinik.ca">stationmall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">153</th>
+                      <td>Mapleview Centre</td>
+                      <td>900 Mapleview Avenue</td>
+                      <td>Unit BB6B</td>
+                      <td>Burlington</td>
+                      <td>ON</td>
+                      <td>L7S 2J8</td>
+                      <td><a href="tel:9055920254">905-592-0254</a></td>
+                      <td><a href="mailto:mapleviewcentre@mobileklinik.ca">mapleviewcentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">154</th>
+                      <td>Hudson Bay Centre</td>
+                      <td>2 Bloor St. E.</td>
+                      <td>Unit C-08</td>
+                      <td>Toronto</td>
+                      <td>ON</td>
+                      <td>M4W 1A8</td>
+                      <td><a href="tel:4168407330">416-840-7330</a></td>
+                      <td><a href="mailto:hbc@mobileklinik.ca">hbc@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">155</th>
+                      <td>Pickering Town Centre</td>
+                      <td>1355 Kingston Road</td>
+                      <td>Unit 278</td>
+                      <td>Pickering</td>
+                      <td>ON</td>
+                      <td>L1V 1B8</td>
+                      <td><a href="tel:2892551401">289-255-1401</a></td>
+                      <td><a href="mailto:ptc@mobileklinik.ca">ptc@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">156</th>
+                      <td>Northgate Mall</td>
+                      <td>161-1500 Fisher Steet</td>
+                      <td></td>
+                      <td>North Bay</td>
+                      <td>ON</td>
+                      <td>P1B 2H3</td>
+                      <td><a href="tel:7056671202">705-667-1202</a></td>
+                      <td><a href="mailto:northgatemall@mobileklinik.ca">northgatemall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">157</th>
+                      <td>Liberty Village</td>
+                      <td>149 East Liberty Street</td>
+                      <td>Unit RT03</td>
+                      <td>Toronto</td>
+                      <td>ON</td>
+                      <td>M6K 3K4</td>
+                      <td><a href="tel:6472508842">647-250-8842</a></td>
+                      <td><a href="mailto:libertyvillage@mobileklinik.ca">liberyvillage@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">158</th>
+                      <td>Markville Mall</td>
+                      <td>5000 Hwy 7</td>
+                      <td>Unit 2225</td>
+                      <td>Markham</td>
+                      <td>ON</td>
+                      <td>L3R 4M9</td>
+                      <td><a href="tel:2893016649">289-301-6649</a></td>
+                      <td><a href="mailto:markvillemall@mobileklinik.ca">markvillemall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">160</th>
+                      <td>Avenue Road</td>
+                      <td>1957 Avenue Road</td>
+                      <td></td>
+                      <td>Toronto</td>
+                      <td>ON</td>
+                      <td>M5M 4A1</td>
+                      <td><a href="tel:4164833773">416-483-3773</a></td>
+                      <td><a href="mailto:avenueroad@mobileklinik.ca">avenueroad@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">163</th>
+                      <td>Main Street</td>
+                      <td>1217 Main St. E.</td>
+                      <td></td>
+                      <td>Hamilton</td>
+                      <td>ON</td>
+                      <td>L8K 1A3</td>
+                      <td><a href="tel:9055731638">905-573-1638</a></td>
+                      <td><a href="mailto:mainstreet@mobileklinik.ca">mainstreet@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">164</th>
+                      <td>Hurontario</td>
+                      <td>5027 Hurontario Street</td>
+                      <td>Unit A3</td>
+                      <td>Mississauga</td>
+                      <td>ON</td>
+                      <td>L4Z 3X6</td>
+                      <td><a href="tel:9056252086">905-625-2086</a></td>
+                      <td><a href="mailto:hurontario@mobileklinik.ca">hurontario@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">166</th>
+                      <td>Royal York</td>
+                      <td>1500 Royal York Road</td>
+                      <td>Unit 15</td>
+                      <td>Etobicoke</td>
+                      <td>ON</td>
+                      <td>M9P 3B6</td>
+                      <td><a href="tel:6472659249">647-265-9249</a></td>
+                      <td><a href="mailto:royalyork@mobileklinik.ca">royalyork@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">201</th>
+                      <td>Promenades Gatineau</td>
+                      <td>1100 Boul Maloney Ouest</td>
+                      <td>Unit 335</td>
+                      <td>Gatineau</td>
+                      <td>QC</td>
+                      <td>J8T 6G3</td>
+                      <td><a href="tel:8195253777">819-525-3777</a></td>
+                      <td><a href="mailto:lespromenades@mobileklinik.ca">lespromenades@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">202</th>
+                      <td>Prominades St Bruno</td>
+                      <td>333A Boul des Promenades</td>
+                      <td>Unit N003B</td>
+                      <td>Saint-Bruno-de-Montarville</td>
+                      <td>QC</td>
+                      <td>J3V 6A7</td>
+                      <td><a href="tel:4506901877">450-690-1877</a></td>
+                      <td><a href="mailto:stbruno@mobileklinik.ca">stbruno@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">203</th>
+                      <td>Galeries d'Anjou</td>
+                      <td>7999 Boul des Galeries d'Anjou</td>
+                      <td>Unit ZB004</td>
+                      <td>Galeries d'Anjou</td>
+                      <td>QC</td>
+                      <td>H1M 1W9</td>
+                      <td><a href="tel:5143517337">514-351-7337</a></td>
+                      <td><a href="mailto:galeriesdanjou@mobileklinik.ca">galeriesdanjou@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">204</th>
+                      <td>Carrefour Laval</td>
+                      <td>3035 Boul le Carrefour</td>
+                      <td>Unit G005</td>
+                      <td>Laval</td>
+                      <td>QC</td>
+                      <td>H7T 1C8</td>
+                      <td><a href="tel:5143756159">514-375-6159</a></td>
+                      <td><a href="mailto:carrefourlaval@mobileklinik.ca">carrefourlaval@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">205</th>
+                      <td>Fairview Pointe-Claire</td>
+                      <td>6801 Transcanda Highway</td>
+                      <td>Unit J007</td>
+                      <td>Pointe-Claire</td>
+                      <td>QC</td>
+                      <td>H9R 5J2</td>
+                      <td><a href="tel:5146949522">514-694-9522</a></td>
+                      <td><a href="mailto:pointeclaire@mobileklinik.ca">pointeclaire@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">206</th>
+                      <td>Laurier Quebec</td>
+                      <td>2700 Boulevard Laurier</td>
+                      <td>Unit 0270</td>
+                      <td>Quebec</td>
+                      <td>QC</td>
+                      <td>G1V 2L8</td>
+                      <td><a href="tel:5813188911">581-318-8911</a></td>
+                      <td><a href="mailto:laurierquebec@mobileklinik.ca">laurierquebec@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">207</th>
+                      <td>Gal de la Capitale</td>
+                      <td>5401 Boul des Galeries</td>
+                      <td>Unit 110</td>
+                      <td>Quebec</td>
+                      <td>QC</td>
+                      <td>G2K 1N4</td>
+                      <td><a href="tel:4182100232">418-210-0232</a></td>
+                      <td><a href="mailto:galeriesdelacapitale@mobileklinik.ca">galeriesdelacapitale@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">209</th>
+                      <td>Montreal Trust/Eaton Centre</td>
+                      <td>705 Rue Sainte-Catherine Ouest</td>
+                      <td>Unit K2505</td>
+                      <td>Montreal</td>
+                      <td>QC</td>
+                      <td>H3B 4G5</td>
+                      <td><a href="tel:5144612264">514-461-2264</a></td>
+                      <td><a href="mailto:cem@mobileklinik.ca">cem@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">210</th>
+                      <td>Place Alexis Nihon</td>
+                      <td>1500 Atwater Avenue</td>
+                      <td>Unit G29 A</td>
+                      <td>Montreal</td>
+                      <td>QC</td>
+                      <td>H3Z 1X5</td>
+                      <td><a href="tel:5144612228">514-461-2228</a></td>
+                      <td><a href="mailto:alexisnihon@mobileklinik.ca">alexisnihon@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">213</th>
+                      <td>Les Rivieres</td>
+                      <td>4125 Boul des Forges</td>
+                      <td>Unit J4</td>
+                      <td>Trois-Rivieres</td>
+                      <td>QC</td>
+                      <td>G8Y 1W1</td>
+                      <td><a href="tel:8733870609">873-387-0609</a></td>
+                      <td><a href="mailto:lesrivieres@mobileklinik.ca">lesrivieres@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">214</th>
+                      <td>Place Longueuil</td>
+                      <td>825 rue Saint-Laurent Ouest</td>
+                      <td>Unit 129</td>
+                      <td>Longueuil</td>
+                      <td>QC</td>
+                      <td>J4K 2V1</td>
+                      <td><a href="tel:4389424055">438-942-4055</a></td>
+                      <td><a href="mailto:placelongueuil@mobileklinik.ca">placelongueuil@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">215</th>
+                      <td>Galeries Rive Nord</td>
+                      <td>100 Buol Brien</td>
+                      <td>Unit 037</td>
+                      <td>Repentigny</td>
+                      <td>QC</td>
+                      <td>J6A 5N4</td>
+                      <td><a href="tel:4389421919">438-942-1919</a></td>
+                      <td><a href="mailto:galeriesrivenord@mobileklinik.ca">galeriesrivenord@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">216</th>
+                      <td>Mail Montenach</td>
+                      <td>600 Boul Sir Wilfrid Laurier</td>
+                      <td>Unit B10</td>
+                      <td>Beloeil</td>
+                      <td>QC</td>
+                      <td>J3G 4J2</td>
+                      <td><a href="tel:4389424780">438-942-4780</a></td>
+                      <td><a href="mailto:mailmontenach@mobileklinik.ca">mailmontenach@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">217</th>
+                      <td>Carrefour Rimouski</td>
+                      <td>419 Boul Jessop</td>
+                      <td>Unit 302</td>
+                      <td>Rimouski</td>
+                      <td>QC</td>
+                      <td>G5L 7Y5</td>
+                      <td><a href="tel:5818055118">581-805-5118</a></td>
+                      <td><a href="mailto:carrefourrimouski@mobileklinik.ca">carrefourrimouski@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">218</th>
+                      <td>Carrefour Frontenac</td>
+                      <td>805 Boul Frontenac E</td>
+                      <td>Unit 018</td>
+                      <td>Thetford Mines</td>
+                      <td>QC</td>
+                      <td>G6G 6L5</td>
+                      <td><a href="tel:4187559304">418-755-9304</a></td>
+                      <td><a href="mailto:carrefourfrontenac@mobileklinik.ca">carrefourfrontenac@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">219</th>
+                      <td>Promenades Beauport</td>
+                      <td>33 Rue Du Carrefour</td>
+                      <td>Unit 148</td>
+                      <td>Quebec</td>
+                      <td>QC</td>
+                      <td>G1C 5R9</td>
+                      <td><a href="tel:5144272770">514-427-2770</a></td>
+                      <td><a href="mailto:promenadesbeauport@mobileklinik.ca">promenadesbeauport@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">220</th>
+                      <td>Les Galeries Chagnon</td>
+                      <td>1200 Boulevard Alphonse-Desjardins</td>
+                      <td>Unit 00595</td>
+                      <td>Levis</td>
+                      <td>QC</td>
+                      <td>G6V 6Y8</td>
+                      <td><a href="tel:5817050654">581-705-0654</a></td>
+                      <td><a href="mailto:lesgalerieschagnon@mobileklinik.ca">lesgalerieschagnon@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">302</th>
+                      <td>Griesbach</td>
+                      <td>9950 - 137th Avenue</td>
+                      <td>Unit 105</td>
+                      <td>Edmonton</td>
+                      <td>AB</td>
+                      <td>T5E 6W1</td>
+                      <td><a href="tel:7807610071">780-761-0071</a></td>
+                      <td><a href="mailto:griesbach@mobileklinik.ca">griesbach@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">303</th>
+                      <td>WEM A116 Store - Phase 1</td>
+                      <td>8882 - 170 Street</td>
+                      <td>Unit 1028</td>
+                      <td>Edmonton</td>
+                      <td>AB</td>
+                      <td>T5T 4M2</td>
+                      <td><a href="tel:7804848828">780-484-8828</a></td>
+                      <td><a href="mailto:wested1@mobileklinik.ca">wested1@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">304</th>
+                      <td>WEM V169 Store - Phase 4</td>
+                      <td>8882 - 170 Street</td>
+                      <td>Unit 1404</td>
+                      <td>Edmonton</td>
+                      <td>AB</td>
+                      <td>T5T 4M2</td>
+                      <td><a href="tel:7804899985">780-489-9985</a></td>
+                      <td><a href="mailto:wested4@mobileklinik.ca">wested4@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">307</th>
+                      <td>Westland Market Mall - Spruce Grove</td>
+                      <td>70 McLeod Avenue</td>
+                      <td>Unit 504</td>
+                      <td>Spruce Grove</td>
+                      <td>AB</td>
+                      <td>T7X 3C7</td>
+                      <td><a href="tel:5874619957">587-461-9957</a></td>
+                      <td><a href="mailto:sprucegrove@mobileklinik.ca">sprucegrove@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">308</th>
+                      <td>Baseline Village - Sherwood Park</td>
+                      <td>318-222 Baseline Road #318</td>
+                      <td></td>
+                      <td>Sherwood Park</td>
+                      <td>AB</td>
+                      <td>T8H 1S8</td>
+                      <td><a href="tel:7804007741">780-400-7741</a></td>
+                      <td><a href="mailto:sherwoodpark@mobileklinik.ca">sherwoodpark@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">309</th>
+                      <td>Southgate</td>
+                      <td>51-5015-111th Street NW</td>
+                      <td>Unit 422</td>
+                      <td>Edmonton</td>
+                      <td>AB</td>
+                      <td>T6H 4M6</td>
+                      <td><a href="tel:5877354444">587-735-4444</a></td>
+                      <td><a href="mailto:southgate@mobileklinik.ca">southgate@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">310</th>
+                      <td>Market Mall</td>
+                      <td>3625 Shaganappi Trail NW</td>
+                      <td>Unit G011</td>
+                      <td>Calgary</td>
+                      <td>AB</td>
+                      <td>T3A 0E2</td>
+                      <td><a href="tel:5877741569">587-774-1569</a></td>
+                      <td><a href="mailto:marketmall@mobileklinik.ca">marketmall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">311</th>
+                      <td>Erin Ridge</td>
+                      <td>935 St. Albert Trail</td>
+                      <td>Unit 320</td>
+                      <td>St. Albert</td>
+                      <td>AB</td>
+                      <td>T8N 4K6</td>
+                      <td><a href="tel:7806510188">780-651-0188</a></td>
+                      <td><a href="mailto:stalbert@mobileklinik.ca">stalbert@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">312</th>
+                      <td>Bower Place Mall</td>
+                      <td>4900 Molly Banister Drive</td>
+                      <td>Unit 226</td>
+                      <td>Red Deer</td>
+                      <td>AB</td>
+                      <td>T4R 1N9</td>
+                      <td><a href="tel:4033092700">403-309-2700</a></td>
+                      <td><a href="mailto:bowerplacemall@mobileklinik.ca">bowerplacemall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">313</th>
+                      <td>Sunridge Mall</td>
+                      <td>2525 36 St NE</td>
+                      <td>Unit 239A</td>
+                      <td>Calgary</td>
+                      <td>AB</td>
+                      <td>T1Y 5T4</td>
+                      <td><a href="tel:4034508279">403-450-8279</a></td>
+                      <td><a href="mailto:sunridgemall@mobileklinik.ca">sunridgemall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">314</th>
+                      <td>Walmart Airdrie</td>
+                      <td>2881 Main St. S.</td>
+                      <td>Unit 770</td>
+                      <td>Airdrie</td>
+                      <td>AB</td>
+                      <td>T4B 3G5</td>
+                      <td><a href="tel:4033160343">403-316-0343</a></td>
+                      <td><a href="mailto:wmairdrie@mobileklinik.ca">wmairdrie@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">316</th>
+                      <td>Park Place Mall</td>
+                      <td>501 - 1 Avenue South</td>
+                      <td></td>
+                      <td>Lethbridge</td>
+                      <td>AB</td>
+                      <td>T1J 4L9</td>
+                      <td><a href="tel:4033881504">403-388-1504</a></td>
+                      <td><a href="mailto:lethbridge@mobileklinik.ca">lethbridge@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">317</th>
+                      <td>Medicine Hat Mall</td>
+                      <td>3292 Dunmore Road SE</td>
+                      <td>Unit 301B</td>
+                      <td>Medicine Hat</td>
+                      <td>AB</td>
+                      <td>T1B 2R4</td>
+                      <td><a href="tel:4034883917">403-488-3917</a></td>
+                      <td><a href="mailto:medicinehat@mobileklinik.ca">medicinehat@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">318</th>
+                      <td>Southcentre Mall</td>
+                      <td>100 Anderson Road SE</td>
+                      <td>Unit 154</td>
+                      <td>Calgary</td>
+                      <td>AB</td>
+                      <td>T2J 3V1</td>
+                      <td><a href="tel:4034515763">403-451-5763</a></td>
+                      <td><a href="mailto:southcentre@mobileklinik.ca">southcentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">322</th>
+                      <td>Westmount Village</td>
+                      <td>200 Southridge Dr., Bldg 2</td>
+                      <td>Unit 262</td>
+                      <td>Okotoks</td>
+                      <td>AB</td>
+                      <td>T1S 0B2</td>
+                      <td><a href="tel:8252109564">825-210-9564</a></td>
+                      <td><a href="mailto:westmountcentre@mobileklinik.ca">westmountcentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">323</th>
+                      <td>Fort McMurray</td>
+                      <td>125 Eagle Ridge Blvd.</td>
+                      <td>Unit 11</td>
+                      <td>Fort McMurray</td>
+                      <td>AB</td>
+                      <td>T9K 2Z7</td>
+                      <td><a href="tel:7808044444">780-804-4444</a></td>
+                      <td><a href="mailto:fortmcmurray@mobileklinik.ca">fortmcmurray@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">324</th>
+                      <td>Chinook Centre</td>
+                      <td>6455 Macleod Trail</td>
+                      <td>Unit 0243A</td>
+                      <td>Calgary</td>
+                      <td>AB</td>
+                      <td>T2H 0K8</td>
+                      <td><a href="tel:5873184036">587-318-4036</a></td>
+                      <td><a href="mailto:chinookcentre@mobileklinik.ca">chinookcentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">325</th>
+                      <td>Grand Prairie</td>
+                      <td>11020 100th Ave</td>
+                      <td>Unit 101A</td>
+                      <td>Grand Prairie</td>
+                      <td>AB</td>
+                      <td>T8V 5L3</td>
+                      <td><a href="tel:5874950637">587-495-0637</a></td>
+                      <td><a href="mailto:gatewaypowercentre@mobileklinik.ca">gatewaypowercentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">400</th>
+                      <td>Kildonan Place</td>
+                      <td>1555 Regent Avenue West</td>
+                      <td>Unit T77</td>
+                      <td>Winnipeg</td>
+                      <td>MB</td>
+                      <td>R2C 4J2</td>
+                      <td><a href="tel:2048155745">204-815-5745</a></td>
+                      <td><a href="mailto:kildonanplace@mobileklinik.ca">kildonanplace@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">401</th>
+                      <td>CF Polo Park</td>
+                      <td>1485 Portage Avenue</td>
+                      <td>Unit Z011A</td>
+                      <td>Winnipeg</td>
+                      <td>MB</td>
+                      <td>R3G 0W4</td>
+                      <td><a href="tel:2042723014">204-272-3014</a></td>
+                      <td><a href="mailto:polopark@mobileklinik.ca">polopark@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">402</th>
+                      <td>Shoppers Mall</td>
+                      <td>1570 18th St.</td>
+                      <td>Unit 67</td>
+                      <td>Brandon</td>
+                      <td>MB</td>
+                      <td>R7A 5C5</td>
+                      <td><a href="tel:2046500022">204-650-0022</a></td>
+                      <td><a href="mailto:shoppersmall@mobileklinik.ca">shoppersmall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">500</th>
+                      <td>CF Champlain</td>
+                      <td>477 Paul St.</td>
+                      <td>Unit Q004A</td>
+                      <td>Dieppe</td>
+                      <td>NB</td>
+                      <td>E1A 4X5</td>
+                      <td><a href="tel:5063170419">506-317-0419</a></td>
+                      <td><a href="mailto:champlainmall@mobileklinik.ca">champlainmall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">501</th>
+                      <td>McAllister Place</td>
+                      <td>519 Westmorland Road</td>
+                      <td>Unit C001A</td>
+                      <td>Saint John</td>
+                      <td>NB</td>
+                      <td>E2J 3W9</td>
+                      <td><a href="tel:5067992307">506-799-2307</a></td>
+                      <td><a href="mailto:mcallisterplace@mobileklinik.ca">mcallisterplace@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">502</th>
+                      <td>Walmart Fredericton</td>
+                      <td>1399 Regent St.</td>
+                      <td>Unit 360</td>
+                      <td>Fredericton</td>
+                      <td>NB</td>
+                      <td>E3C 1A3</td>
+                      <td><a href="tel:5064429064">506-442-9064</a></td>
+                      <td><a href="mailto:wmfrederictons@mobileklinik.ca">wmfrederictons@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">600</th>
+                      <td>Avalon Mall</td>
+                      <td>48 Kenmount Road</td>
+                      <td>Unit 0335</td>
+                      <td>St. John's</td>
+                      <td>NL</td>
+                      <td>A1B 1W3</td>
+                      <td><a href="tel:7098005265">709-800-5265</a></td>
+                      <td><a href="mailto:avalonmall@mobileklinik.ca">avalonmall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">601</th>
+                      <td>Corner Brook</td>
+                      <td>44 Maple Valley Road</td>
+                      <td>Unit 05061</td>
+                      <td>Corner Brook</td>
+                      <td>NL</td>
+                      <td>A2H 6L8</td>
+                      <td><a href="tel:7099853072">709-985-3072</a></td>
+                      <td><a href="mailto:cornerbrookmall@mobileklinik.ca">cornerbrookmall@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">700</th>
+                      <td>Midtown Plaza</td>
+                      <td>201 1 Ave. S.</td>
+                      <td>Unit 272</td>
+                      <td>Saskatoon</td>
+                      <td>SK</td>
+                      <td>S7K 1J9</td>
+                      <td><a href="tel:3068081929">306-808-1929</a></td>
+                      <td><a href="mailto:midtownplaza@mobileklinik.ca">midtownplaza@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">701</th>
+                      <td>Grasslands</td>
+                      <td>4625 Gordon Road</td>
+                      <td>Unit 6</td>
+                      <td>Regina</td>
+                      <td>SK</td>
+                      <td>S4W 0B7</td>
+                      <td><a href="tel:3062058172">306-205-8172</a></td>
+                      <td><a href="mailto:grasslandsregina@mobileklinik.ca">grasslandsregina@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">800</th>
+                      <td>Pacific Centre</td>
+                      <td>701 West Georgia St.</td>
+                      <td>Unit H034A</td>
+                      <td>Vancouver</td>
+                      <td>BC</td>
+                      <td>V6E 1B5</td>
+                      <td><a href="tel:6049094130">604-909-4130</a></td>
+                      <td><a href="mailto:paccentre@mobileklinik.ca">paccentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">801</th>
+                      <td>Guildford Town Centre</td>
+                      <td>10355 152 Street</td>
+                      <td>Unit 2636</td>
+                      <td>Surrey</td>
+                      <td>BC</td>
+                      <td>V3R 7C1</td>
+                      <td><a href="tel:7787350997">778-735-0997</a></td>
+                      <td><a href="mailto:guildford@mobileklinik.ca">guildford@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">802</th>
+                      <td>Orchard Park</td>
+                      <td>2271 Harvey Avenue</td>
+                      <td>Unit 0360</td>
+                      <td>Kelowna</td>
+                      <td>BC</td>
+                      <td>V1Y 6H2</td>
+                      <td><a href="tel:2509803382">250-980-3382</a></td>
+                      <td><a href="mailto:orchardpark@mobileklinik.ca">orchardpark@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">803</th>
+                      <td>Metropolis at Metrotown</td>
+                      <td>312-4800 Kingsway</td>
+                      <td>Unit F5</td>
+                      <td>Burnaby</td>
+                      <td>BC</td>
+                      <td>V5H 4J2</td>
+                      <td><a href="tel:6042150869">604-215-0869</a></td>
+                      <td><a href="mailto:metrotown@mobileklinik.ca">metrotown@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">804</th>
+                      <td>Willowbrook Centre</td>
+                      <td>19705 Fraser Hwy</td>
+                      <td>Unit 115A</td>
+                      <td>Langley</td>
+                      <td>BC</td>
+                      <td>V3A 7E9</td>
+                      <td><a href="tel:7782183984">778-218-3984</a></td>
+                      <td><a href="mailto:willowbrook@mobileklinik.ca">willowbrook@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">805</th>
+                      <td>Park Royal</td>
+                      <td>2002 Park Royal S.</td>
+                      <td>Unit 2024</td>
+                      <td>West Vancouver</td>
+                      <td>BC</td>
+                      <td>V7T 2W4</td>
+                      <td><a href="tel:7782808628">778-280-8628</a></td>
+                      <td><a href="mailto:parkroyal@mobileklinik.ca">parkroyal@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">806</th>
+                      <td>Sevenoaks Shopping Centre</td>
+                      <td>32900 S Fraser Way</td>
+                      <td>Unit 322</td>
+                      <td>Abbotsford</td>
+                      <td>BC</td>
+                      <td>V2S 5A1</td>
+                      <td><a href="tel:6047561369">604-756-1369</a></td>
+                      <td><a href="mailto:sevenoaks@mobileklinik.ca">sevenoaks@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">807</th>
+                      <td>Hillside Shopping Centre</td>
+                      <td>1644 Hillside Avenue</td>
+                      <td>Unit 106A</td>
+                      <td>Victoria</td>
+                      <td>BC</td>
+                      <td>V8T 2C5</td>
+                      <td><a href="tel:2364788680">236-478-8680</a></td>
+                      <td><a href="mailto:hillside@mobileklinik.ca">hillside@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">808</th>
+                      <td>Royal City Centre</td>
+                      <td>610 6th St. #115</td>
+                      <td>Unit 121</td>
+                      <td>New Westminster</td>
+                      <td>BC</td>
+                      <td>V3L 3C2</td>
+                      <td><a href="tel:2364764820">236-476-4820</a></td>
+                      <td><a href="mailto:newwestminster@mobileklinik.ca">newwestminster@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">809</th>
+                      <td>Woodgrove Centre</td>
+                      <td>6631 Island Hwy</td>
+                      <td>Unit 106</td>
+                      <td>Nanaimo</td>
+                      <td>BC</td>
+                      <td>V9T 4T7</td>
+                      <td><a href="tel:2507396100">250-739-6100</a></td>
+                      <td><a href="mailto:woodgrove@mobileklinik.ca">woodgrove@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">812</th>
+                      <td>Coquitlam Centre</td>
+                      <td>2929 Barnet Hwy</td>
+                      <td>Unit 2430</td>
+                      <td>Coquitlam</td>
+                      <td>BC</td>
+                      <td>V3B 5R5</td>
+                      <td><a href="tel:2505616401">250-561-6401</a></td>
+                      <td><a href="mailto:coquitlamcentre@mobileklinik.ca">coquitlamcentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">813</th>
+                      <td>Pine Centre</td>
+                      <td>3055 Massey Dr Suite 156</td>
+                      <td>Unit 89</td>
+                      <td>Prince George</td>
+                      <td>BC</td>
+                      <td>V2N 2S9</td>
+                      <td><a href="tel:2364772390">236-647-2390</a></td>
+                      <td><a href="mailto:pinecentre@mobileklinik.ca">pinecentre@mobileklinik.ca</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">900</th>
+                      <td>Halifax Shopping Centre</td>
+                      <td>7001 Mumford Road</td>
+                      <td>Unit 116B</td>
+                      <td>Halifax</td>
+                      <td>NS</td>
+                      <td>B3L 4R3</td>
+                      <td><a href="tel:9029826623">902-982-6623</a></td>
+                      <td><a href="mailto:hsc@mobileklinik.ca">hsc@mobileklinik.ca</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            
+            
+            <!--
+<table border="0" cellpadding="0" cellspacing="0" width="1659" class="xl6518220" style="margin-left:0; margin-right:0;">
+ <col class="xl8318220" width="95" style="mso-width-source:userset;mso-width-alt:3474;width:71pt">
+ <col class="xl6918220" width="367" style="mso-width-source:userset;mso-width-alt:13421;width:275pt">
+ <col class="xl6918220" width="269" style="mso-width-source:userset;mso-width-alt:9837;width:202pt">
+ <col class="xl6918220" width="119" style="mso-width-source:userset;mso-width-alt:4352;width:89pt">
+ <col class="xl6918220" width="200" style="mso-width-source:userset;mso-width-alt:7314;width:150pt">
+ <col class="xl9118220" width="71" style="mso-width-source:userset;mso-width-alt:2596;width:53pt">
+ <col class="xl9018220" width="115" style="mso-width-source:userset;mso-width-alt:4205;width:86pt">
+ <col class="xl9318220" width="130" style="mso-width-source:userset;mso-width-alt:4754;width:98pt">
+ <col class="xl6518220" width="293" style="mso-width-source:userset;mso-width-alt:10715;width:220pt">
+ <tr class="xl6718220" height="25" style="mso-height-source:userset;height:18.75pt">
+  <td height="25" class="xl7918220" width="95" style="height:18.75pt;width:71pt">Store #</td>
+  <td class="xl7918220" width="367" style="border-left:none;width:275pt"><a name="RANGE!B1:H101">Repair Store Name</a></td>
+  <td class="xl7918220" width="269" style="border-left:none;width:202pt">Address 1</td>
+  <td class="xl7918220" width="119" style="border-left:none;width:89pt">Address 2</td>
+  <td class="xl7918220" width="200" style="border-left:none;width:150pt">City</td>
+  <td class="xl7918220" width="71" style="border-left:none;width:53pt">Province</td>
+  <td class="xl7918220" width="115" style="border-left:none;width:86pt">Postal Code</td>
+  <td class="xl7918220" width="130" style="border-left:none;width:98pt">Store Phone #</td>
+  <td class="xl7918220" width="293" style="border-left:none;width:220pt">Store Email</td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">100</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Laurier Quebec</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">2700<span
+  style="mso-spacerun:yes">� </span>Boulevard Laurier</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit 0270</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Quebec</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">G1V 2L8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5813188911"><span style="text-decoration:none">581-318-8911</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:laurierquebec@mobileklinik.ca"><span style="text-decoration:
+  none">laurierquebec@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">100</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">St Laurent</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">1200 St Laurent
+  Blvd.</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Ottawa</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">K1K 3B8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6137416111"><span style="text-decoration:none">613-741-6111</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:stlaurent@mobileklinik.ca"><span style="text-decoration:none">stlaurent@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">103</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Dundas Square,
+  Toronto</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">10 Dundas Street
+  East</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit B128</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Toronto</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M5B 2G9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4162600888"><span style="text-decoration:none">416-260-0888</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:dundassquare@mobileklinik.ca"><span style="text-decoration:none">dundassquare@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">104</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Vaughan Mills,
+  Vaughan</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1 Bass Pro Mills
+  Drive</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">No. 744</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Vaughan</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L4K 5W4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9055320922"><span style="text-decoration:none">905-532-0922</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:vaughanmills@mobileklinik.ca"><span style="text-decoration:none">vaughanmills@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">105</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Pen Centre, St.
+  Catharines</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">221 Glendale
+  Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 106C</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">St. Catharines</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L2T 2K9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9056842333"><span style="text-decoration:none">905-684-2333</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:pencentre@mobileklinik.ca"><span style="text-decoration:none">pencentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">106</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Yonge &amp;
+  Eglinton, Toronto</td>
+  <td class=xl7218220 style="border-top:none;border-left:none"><a
+  name="RANGE!C7">2300 Yonge Street</a></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit K1</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Toronto</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M4P 1E4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4164852772"><span style="text-decoration:none">416-485-2772</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:yongeeglinton@mobileklinik.ca"><span style="text-decoration:
+  none">yongeeglinton@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">107</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Square One,
+  Mississauga</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">100 City Centre
+  Drive</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 1-846</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Mississauga</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L5B 2C9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="9052769997"><span style="text-decoration:none">905-276-9997</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:squareone@mobileklinik.ca"><span style="text-decoration:none">squareone@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">108</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">White Oaks,
+  London</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1105 Wellington
+  Road</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 232</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">London</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N6E 1V4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5196910880"><span style="text-decoration:none">519-691-0880</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:whiteoaks@mobileklinik.ca"><span style="text-decoration:none">whiteoaks@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">109</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">The Boardwalk,
+  Kitchener<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">235 The
+  Boardwalk</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 7</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Kitchener</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N2J 3Z4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5194731001"><span style="text-decoration:none">519-473-1001</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:theboardwalk@mobileklinik.ca"><span style="text-decoration:none">theboardwalk@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">110</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Bayshore, Ottawa</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">100 Bayshore
+  Drive</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit AA45D</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Ottawa</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">K2B 8C1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6135966430"><span style="text-decoration:none">613-596-6430</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:bayshore@mobileklinik.ca"><span style="text-decoration:none">bayshore@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">111</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Quinte Mall -
+  Belleville</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">390 N Front St</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 7K09C</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Belleville</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">K8P 3C9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:3436000130"><span style="text-decoration:none">343-600-0130</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:quintemall@mobileklinik.ca"><span style="text-decoration:none">quintemall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">112</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Cataraqui -
+  Kingston</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">945 Gardiners
+  Road</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit U02</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Kingston</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">K7M 7H4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:3433027520"><span style="text-decoration:none">343-302-7520</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:cataraquicentre@mobileklinik.ca"><span style="text-decoration:
+  none">cataraquicentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">113</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Cambridge</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">355 Hespeler
+  Road</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Cambridge</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N1R 6B3</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2263180895"><span style="text-decoration:none">226-318-0895</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:cambridge@mobileklinik.ca"><span style="text-decoration:none">cambridge@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">114</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Clair
+  Marketplace, Guelph</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">20 Clair Road
+  West</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit B4-4</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Guelph</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N1L 0A8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2263142160"><span style="text-decoration:none">226-314-2160</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:guelph@mobileklinik.ca"><span style="text-decoration:none">guelph@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">115</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Devonshire,
+  Windsor</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">3100 Howard
+  Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit Q12</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Windsor</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N8X 3Y8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2262162569"><span style="text-decoration:none">226-216-2569</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:devonshire@mobileklinik.ca"><span style="text-decoration:none">devonshire@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">116</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Bramalea City
+  Centre</td>
+  <td class=xl7218220 style="border-top:none;border-left:none"><span
+  style="mso-spacerun:yes">�</span>25 Peel Centre Dr.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 310</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Brampton</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L6T 3R5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2899482770"><span style="text-decoration:none">289-948-2770</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:bramalea@mobileklinik.ca"><span style="text-decoration:none">bramalea@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">117</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Fiesta Plaza,
+  Stoney Creek</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">90 Highway 8</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 113C</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Stoney Creek</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L8G 4H3</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9052966751"><span style="text-decoration:none">905-296-6751</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:fiestamall@mobileklinik.ca"><span style="text-decoration:none">fiestamall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">118</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Cloverdale Mall,
+  Etobicoke</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">250 The East
+  Mall</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 220</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Etobicoke</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M9B 3Y8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6473434301"><span style="text-decoration:none">647-343-4301</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:cloverdalemall@mobileklinik.ca"><span style="text-decoration:
+  none">cloverdalemall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">119</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Yonge &amp;
+  Sheppard, North York</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">4841 Yonge
+  Street</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit K245</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Toronto</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M2N 5X2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6474284287"><span style="text-decoration:none">647-428-4287</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:yongesheppard@mobileklinik.ca"><span style="text-decoration:
+  none">yongesheppard@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">120</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Walmart
+  Scarborough West</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1900 Eglinton
+  Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 770</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Scarborough</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M1L 2L9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4168403927"><span style="text-decoration:none">416-840-3927</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:WMScarboroughW@mobileklinik.ca"><span style="text-decoration:
+  none">WMScarboroughW@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">121</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Creekside
+  Crossing, South East Mississauga<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1476 Dundas St.
+  E.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">D4 - Unit 11</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Mississauga</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L4X 1L4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9052674666"><span style="text-decoration:none">905-267-4666</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:creeksidecrossing@mobileklinik.ca"><span style="text-decoration:
+  none">creeksidecrossing@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">122</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Erin Mills Town
+  Center, Mississauga</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">5100 Erin Mills
+  Parkway</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit<span
+  style="mso-spacerun:yes">� </span>B205</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Mississauga</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L5M 4Z5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2899978299"><span style="text-decoration:none">289-997-8299</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:erinmills@mobileklinik.ca"><span style="text-decoration:none">erinmills@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">125</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Sherway Gardens</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">25 The West Mall</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Etobicoke</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M9C 1B8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4166205411"><span style="text-decoration:none">416-620-5411</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:sherway@mobileklinik.ca"><span style="text-decoration:none">sherway@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">126</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">CF Toronto Eaton
+  Centre</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">220 Yonge Street</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit Z020A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Toronto</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M5B 2H1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4165931512"><span style="text-decoration:none">416-593-1512</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:torontoeaton@mobileklinik.ca"><span style="text-decoration:none">torontoeaton@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">128</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Oshawa Gateway
+  Centre</td>
+  <td class=xl7218220 style="border-top:none;border-left:none"><span
+  style="mso-spacerun:yes">�</span>238 Ritson Road N.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Oshawa</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L1G 1Z7</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9054329191"><span style="text-decoration:none">905-432-9191</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:oshawa@mobileklinik.ca"><span style="text-decoration:none">oshawa@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">129</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">DC Upper Canada Mall</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">17600 Yonge
+  Street</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Kiosk 14</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Newmarket</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L3Y 4Z1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9058301525"><span style="text-decoration:none">905-830-1525</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:dcuppercanada@devicecare.ca"><span style="text-decoration:none">dcuppercanada@devicecare.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">130</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Park Place,
+  Barrie</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">120 Park Place
+  Blvd.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 5B</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Barrie</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L4N 6P1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7058128193"><span style="text-decoration:none">705-812-8193</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:parkplace@mobileklinik.ca"><span style="text-decoration:none">parkplace@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">131</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Meadowlands,
+  Ancaster</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">737 Golf Links
+  Rd.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 4</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Ancaster</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L9K 1L5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2893460285"><span style="text-decoration:none">289-346-0285</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:meadowlands@mobileklinik.ca"><span style="text-decoration:none">meadowlands@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">132</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Rideau Centre</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">50 Rideau St.</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit 0350A</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Ottawa</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">K1N 9J7</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6136675607"><span style="text-decoration:none">613-667-5607</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:rideaucentre@mobileklinik.ca"><span style="text-decoration:none">rideaucentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">133</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Walmart Sarnia</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1444 Quinn Dr.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Sarnia</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N7S 6M8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5194790737"><span style="text-decoration:none">519-479-0737</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:wmsarnia@mobileklinik.ca"><span style="text-decoration:none">wmsarnia@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">135</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Fairview Mall</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1800 Sheppard
+  Ave. E.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">North York</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M2J 5A7</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4167562349"><span style="text-decoration:none">416-756-2349</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:fairviewmall@mobileklinik.ca"><span style="text-decoration:none">fairviewmall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">136</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Lime Ridge
+  Mall<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">999 Upper
+  Wentworth St.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Hamilton</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L9A 4X5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9055742349"><span style="text-decoration:none">905-574-2349</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:limeridge@mobileklinik.ca"><span style="text-decoration:none">limeridge@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">137</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Scarborough Town
+  Centre</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">300 Borough Dr
+  Lower Level</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Scarborough</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M1P 4P5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4162969666"><span style="text-decoration:none">416-296-9666</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:stc@mobileklinik.ca"><span style="text-decoration:none">stc@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">138</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Upper Canada
+  Mall<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">17600 Yonge St.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Newmarket</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L3Y 4Z1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9058532349"><span style="text-decoration:none">905-853-2349</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:ucm@mobileklinik.ca"><span style="text-decoration:none">ucm@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">139</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Fairview Park
+  Mall<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">2960 Kingsway
+  Dr.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Kitchener</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N2C 1X1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5198962828"><span style="text-decoration:none">519-896-2828</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:fairviewpark@mobileklinik.ca"><span style="text-decoration:none">fairviewpark@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">140</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Oshawa
+  Centre<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">419 King St W.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Oshawa</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L1J 2K5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9054342349"><span style="text-decoration:none">905-434-2349</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:oshawacentre@mobileklinik.ca"><span style="text-decoration:none">oshawacentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">141</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Conestoga
+  Mall<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">550 King St N.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Waterloo</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N2L 5W6</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5198851919"><span style="text-decoration:none">519-885-1919</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:conestoga@mobileklinik.ca"><span style="text-decoration:none">conestoga@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">142</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Masonville
+  Place<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1680 Richmond
+  St.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">London</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">N6G 3Y9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5196722349"><span style="text-decoration:none">519-672-2349</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:masonville@mobileklinik.ca"><span style="text-decoration:none">masonville@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">143</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Walmart Milton</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1280 Steeles
+  Ave. E.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Milton</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L9T 6R1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4166237292"><span style="text-decoration:none">416-623-7292</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:wmmilton@mobileklinik.ca"><span style="text-decoration:none">wmmilton@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">144</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Walmart Oakville</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">234 Hays Blvd.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Oakville</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L6H 6M4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9059011949"><span style="text-decoration:none">905-901-1949</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:wmoakville@mobileklinik.ca"><span style="text-decoration:none">wmoakville@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">145</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Lansdowne Place,
+  Peterborough</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">645 Lansdowne
+  St. W.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 152A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Peterborough</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">K9J 7Y5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7055360757"><span style="text-decoration:none">705-536-0757</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:landsdowne@mobileklinik.ca"><span style="text-decoration:none">landsdowne@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">147</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Walmart Niagara
+  Falls</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">7481 Oakwood Dr.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Niagara Falls</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L2G 0J5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2894776122"><span style="text-decoration:none">289-477-6122</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:wmniagara@mobileklinik.ca"><span style="text-decoration:none">wmniagara@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">148</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Dufferin Mall</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">900 Dufferin St.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 431</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Toronto</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M6H 4A9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6474361022"><span style="text-decoration:none">647-436-1022</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:dufferinmall@mobileklinik.ca"><span style="text-decoration:none">dufferinmall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">152</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Station Mall,
+  Sault Ste. Marie</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">293 Bay St.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit J14</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Sault Ste Marie</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">P6A 1X3</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7059083015"><span style="text-decoration:none">705-908-3015</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:stationmall@mobileklinik.ca"><span style="text-decoration:none">stationmall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">153</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Mapleview
+  Burlington</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">900 Maple Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit BB6B</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Burlington</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L7S 2J8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:9055920254"><span style="text-decoration:none">905-592-0254</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:mapleviewcentre@mobileklinik.ca"><span style="text-decoration:
+  none">mapleviewcentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">154</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Hudson Bay
+  Centre</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">2 Bloor St. E.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit C-08</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Toronto</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">M4W 1A8</td>
+  <td class=xl9518220 width=130 style="border-top:none;border-left:none;
+  width:98pt"><a href="tel:4168407330"><span style="text-decoration:none">416-840-7330</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:hbc@mobileklinik.ca"><span style="text-decoration:none">hbc@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">155</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Pickering Town
+  Centre</td>
+  <td class=xl7318220 style="border-top:none;border-left:none">1355 Kingston
+  Road.</td>
+  <td class=xl7318220 style="border-top:none;border-left:none">Unit 278</td>
+  <td class=xl7318220 style="border-top:none;border-left:none">Pickering</td>
+  <td class=xl8618220 style="border-top:none;border-left:none">ON</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">L1V 1B8</td>
+  <td class=xl9518220 width=130 style="border-top:none;border-left:none;
+  width:98pt"><a href="tel:2892551401"><span style="text-decoration:none">289-255-1401</span></a></td>
+  <td class=xl7818220 width=293 style="border-top:none;border-left:none;
+  width:220pt"><a href="mailto:ptc@mobileklinik.ca"><span style="text-decoration:
+  none">ptc@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">201</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Promenades Gatineau</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">1100 Boulevard
+  Maloney Ouest</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit 335</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Gatineau</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">J8T 6G3</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:8195253777"><span style="text-decoration:none">819-525-3777</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:lespromenades@mobileklinik.ca"><span style="text-decoration:
+  none">lespromenades@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">202</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Promenades St Bruno</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">333A Boulevard
+  des Promenades</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit N003B</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Saint-Bruno-de-Montarville</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">J3V 6A7</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4506901877"><span style="text-decoration:none">450-690-1877</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:stbruno@mobileklinik.ca"><span style="text-decoration:none">stbruno@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">203</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Galeries D"Anjou</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">7999 Boulevard
+  des Galeries d"Anjou<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit ZB004</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Galeries d"Anjou</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">H1M 1W9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5143517337"><span style="text-decoration:none">514-351-7337</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:galeriesdanjou@mobileklinik.ca"><span style="text-decoration:
+  none">galeriesdanjou@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">204</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Carrefour Laval</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">3035 Boulevard
+  le Carrefour</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit G005</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Laval</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">H7T 1C8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5143756159"><span style="text-decoration:none">514-375-6159</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:carrefourlaval@mobileklinik.ca"><span style="text-decoration:
+  none">carrefourlaval@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8218220 style="height:15.0pt;border-top:none">205</td>
+  <td class=xl7418220 style="border-top:none;border-left:none">Fairview
+  Pointe-Claire</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">6801 Transcanada
+  Highway</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit J007</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Pointe-Claire</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">H9R 5J2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5146949522"><span style="text-decoration:none">514-694-9522</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:pointeclaire@mobileklinik.ca"><span style="text-decoration:none">pointeclaire@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">207</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Gal de la Capitale</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">5401 Boulevard
+  des Galeries</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit 110</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Quebec</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">G2K 1N4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4182100232"><span style="text-decoration:none">418-210-0232</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:galeriesdelacapitale@mobileklinik.ca"><span style="text-decoration:
+  none">galeriesdelacapitale@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">209</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Montreal Trust/Eaton Centre</td>
+  <td class=xl7418220 style="border-top:none;border-left:none">705 Rue
+  Sainte-Catherine Ouest</td>
+  <td class=xl7418220 style="border-top:none;border-left:none">Unit K2505</td>
+  <td class=xl7418220 style="border-top:none;border-left:none">Montreal</td>
+  <td class=xl8718220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">H3B 4G5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5144612264"><span style="text-decoration:none">514-461-2264</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:cem@mobileklinik.ca"><span style="text-decoration:none">cem@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">210</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Place Alexis Nihon</td>
+  <td class=xl7518220 width=269 style="border-top:none;border-left:none;
+  width:202pt">1500 Atwater Ave, Montreal</td>
+  <td class=xl7518220 width=119 style="border-top:none;border-left:none;
+  width:89pt">Unit G29 A</td>
+  <td class=xl7518220 width=200 style="border-top:none;border-left:none;
+  width:150pt">Montreal</td>
+  <td class=xl8818220 width=71 style="border-top:none;border-left:none;
+  width:53pt">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">H3Z 1X5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5144612228"><span style="text-decoration:none">514-461-2228</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:alexisnihon@mobileklinik.ca"><span style="text-decoration:none">alexisnihon@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">213</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Les Rivieres - Trois Rivieres</td>
+  <td class=xl7518220 width=269 style="border-top:none;border-left:none;
+  width:202pt">4125, Blvd. Des Forges</td>
+  <td class=xl7518220 width=119 style="border-top:none;border-left:none;
+  width:89pt">Unit J4</td>
+  <td class=xl7518220 width=200 style="border-top:none;border-left:none;
+  width:150pt">Trois-Rivieres</td>
+  <td class=xl8818220 width=71 style="border-top:none;border-left:none;
+  width:53pt">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">G8Y 1W1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:8733870609"><span style="text-decoration:none">873-387-0609</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:lesrivieres@mobileklinik.ca"><span style="text-decoration:none">lesrivieres@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">214</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Place Longueuil</td>
+  <td class=xl7518220 width=269 style="border-top:none;border-left:none;
+  width:202pt">825 Rue Saint-Laurent Quest</td>
+  <td class=xl7518220 width=119 style="border-top:none;border-left:none;
+  width:89pt">Unit 129</td>
+  <td class=xl7518220 width=200 style="border-top:none;border-left:none;
+  width:150pt">Longueuil</td>
+  <td class=xl8818220 width=71 style="border-top:none;border-left:none;
+  width:53pt">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">J4K 2V1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4389424055"><span style="text-decoration:none">438-942-4055</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:placelongueuil@mobileklinik.ca"><span style="text-decoration:
+  none">placelongueuil@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">215</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Galeries Rive Nord Repentigny</td>
+  <td class=xl7518220 width=269 style="border-top:none;border-left:none;
+  width:202pt">100 Boulevard Brien</td>
+  <td class=xl7518220 width=119 style="border-top:none;border-left:none;
+  width:89pt">Unit 037</td>
+  <td class=xl7518220 width=200 style="border-top:none;border-left:none;
+  width:150pt">Repentigny</td>
+  <td class=xl8818220 width=71 style="border-top:none;border-left:none;
+  width:53pt">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">J6A 5N4</td>
+  <td class=xl9518220 width=130 style="border-top:none;border-left:none;
+  width:98pt"><a href="tel:4389421919"><span style="text-decoration:none">438-942-1919</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:galeriesrivenord@mobileklinik.ca"><span style="text-decoration:
+  none">galeriesrivenord@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">216</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Mail Montenach Beloeil</td>
+  <td class=xl7518220 width=269 style="border-top:none;border-left:none;
+  width:202pt">600 Boulevard Sir Wilfrid Laurier</td>
+  <td class=xl7518220 width=119 style="border-top:none;border-left:none;
+  width:89pt">Unit B10</td>
+  <td class=xl7518220 width=200 style="border-top:none;border-left:none;
+  width:150pt">Beloeil</td>
+  <td class=xl8818220 width=71 style="border-top:none;border-left:none;
+  width:53pt">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">J3G 4J2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4389424780"><span style="text-decoration:none">438-942-4780</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:mailmontenach@mobileklinik.ca"><span style="text-decoration:
+  none">mailmontenach@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">217</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Carrefour Rimouski</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">419 Boulevard
+  Jessop</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit 302</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Rimouski</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">G5L 7Y5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5818055118"><span style="text-decoration:none">581-805-5118</span></a></td>
+  <td class=xl7818220 width=293 style="border-top:none;border-left:none;
+  width:220pt"><a href="mailto:carrefourrimouski@mobileklinik.ca"><span
+  style="text-decoration:none">carrefourrimouski@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">219</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Promeandes
+  Beauport</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">33 Rue Du
+  Carrefour</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Unit 148</td>
+  <td class=xl7118220 style="border-top:none;border-left:none">Quebec</td>
+  <td class=xl8418220 style="border-top:none;border-left:none">QC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">G1C 5R9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5144272770"><span style="text-decoration:none">514-427-2770</span></a></td>
+  <td class=xl7718220 style="border-top:none;border-left:none"><a
+  href="mailto:promenadesbeauport@mobileklinik.ca"><span style="text-decoration:
+  none">promenadesbeauport@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">302</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Griesbach<span
+  style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">9950 � 137th
+  Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 105</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Edmonton</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T5E 6W1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7807610071"><span style="text-decoration:none">780-761-0071</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:griesbach@mobileklinik.ca"><span style="text-decoration:none">griesbach@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">303</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">West Edmonton
+  Mall A116 Store - Phase 1 Re-Brand</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">8882 - 170
+  Street</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 1028</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Edmonton</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T5T 4M2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7804848828"><span style="text-decoration:none">780-484-8828</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:wested1@mobileklinik.ca"><span style="text-decoration:none">wested1@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">304</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">West Edmonton
+  Mall V169 Store - Phase 4 Re-Brand</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">8882 - 170
+  Street</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 1404</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Edmonton</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T5T 4M2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7804899985"><span style="text-decoration:none">780-489-9985</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:wested4@mobileklinik.ca"><span style="text-decoration:none">wested4@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">307</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Westland Market
+  Mall, Spruce Grove Re-Brand</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">70 Mcleod Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 504</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Spruce Grove</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T7X 3C7</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5874619957"><span style="text-decoration:none">587-461-9957</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:sprucegrove@mobileklinik.ca"><span style="text-decoration:none">sprucegrove@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">308</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Baseline
+  Village, Sherwood Park Re-Brand</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">318-222 Baseline
+  Road #318</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Sherwood Park</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T8H 1S8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7804007741"><span style="text-decoration:none">780-400-7741</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:sherwoodpark@mobileklinik.ca"><span style="text-decoration:none">sherwoodpark@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">309</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Southgate,
+  Edmonton<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">51-5015-111th
+  Street NW</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 422</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Edmonton</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T6H 4M6</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5877354444"><span style="text-decoration:none">587-735-4444</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:southgate@mobileklinik.ca"><span style="text-decoration:none">southgate@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">310</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Market Mall,
+  Calgary</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">3625 Shaganappi
+  Trail NW</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit G011</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Calgary</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T3A 0E2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5877741569"><span style="text-decoration:none">587-774-1569</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:marketmall@mobileklinik.ca"><span style="text-decoration:none">marketmall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">311</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Erin Ridge, St
+  Albert</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">935 St. Albert
+  Trail</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 320</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">St. Albert</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T8N 4K6</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7806510188"><span style="text-decoration:none">780-651-0188</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:stalbert@mobileklinik.ca"><span style="text-decoration:none">stalbert@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">312</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Bower Place
+  Mall, Red Deer</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">4900 Molly
+  Banister Dr.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 226</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Red Deer</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T4R 1N9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4033092700"><span style="text-decoration:none">403-309-2700</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:bowerplacemall@mobileklinik.ca"><span style="text-decoration:
+  none">bowerplacemall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">313</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Sunridge Mall,
+  Calgary</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">2525 36 St NE</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 239A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Calgary</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T1Y 5T4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4034508279"><span style="text-decoration:none">403-450-8279</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:sunridgemall@mobileklinik.ca"><span style="text-decoration:none">sunridgemall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">314</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Walmart Airdrie</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">2881 Main St S.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 770</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Airdrie</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T4B 3G5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4033160343"><span style="text-decoration:none">403-316-0343</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:wmairdrie@mobileklinik.ca"><span style="text-decoration:none">wmairdrie@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">316</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Park Place Mall,
+  Lethbridge</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">501 � 1 Avenue
+  South</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">&nbsp;</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Lethbridge</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T1J 4L9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4033881504"><span style="text-decoration:none">403-388-1504</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:lethbridge@mobileklinik.ca"><span style="text-decoration:none">lethbridge@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">317</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Medicine Hat
+  Mall, Medicine Hat</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">3292 Dunmore Rd
+  SE</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 301B</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Medicine Hat</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T1B 2R4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4034883917"><span style="text-decoration:none">403-488-3917</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:medicinehat@mobileklinik.ca"><span style="text-decoration:none">medicinehat@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">318</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Southcentre
+  Mall, Calgary</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">100 Anderson Rd
+  SE</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 154</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Calgary</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T2J 3V1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:4034515763"><span style="text-decoration:none">403-451-5763</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:southcentre@mobileklinik.ca"><span style="text-decoration:none">southcentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">322</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Westmount Village, Okotoks</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">200 Southridge
+  Dr, Building 2</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 262</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Okotoks</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T1S 0B2</td>
+  <td class=xl9518220 width=130 style="border-top:none;border-left:none;
+  width:98pt"><a href="tel:8252109564"><span style="text-decoration:none">825-210-9564</span></a></td>
+  <td class=xl7818220 width=293 style="border-top:none;border-left:none;
+  width:220pt"><a href="mailto:westmountcentre@mobileklinik.ca"><span
+  style="text-decoration:none">westmountcentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">323</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Chinook</td>
+  <td class=xl7318220 style="border-top:none;border-left:none">6455 Macleod
+  Trail</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 0243A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Calgary</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T2H 0K8</td>
+  <td class=xl9218220 style="border-top:none;border-left:none">TBD</td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:chinookcentre@mobileklinik.ca"><span style="text-decoration:
+  none">chinookcentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">323</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Fort McMurray</td>
+  <td class=xl7618220 width=269 style="border-top:none;border-left:none;
+  width:202pt">125 Eagle Ridge Blvd.</td>
+  <td class=xl7618220 width=119 style="border-top:none;border-left:none;
+  width:89pt">Unit 11</td>
+  <td class=xl7618220 width=200 style="border-top:none;border-left:none;
+  width:150pt">Fort McMurray</td>
+  <td class=xl8918220 width=71 style="border-top:none;border-left:none;
+  width:53pt">AB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">T9K 2Z7</td>
+  <td class=xl9518220 width=130 style="border-top:none;border-left:none;
+  width:98pt"><a href="tel:7808044444"><span style="text-decoration:none">780-804-4444</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:fortmcmurray@mobileklinik.ca"><span style="text-decoration:none">fortmcmurray@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">400</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Kildonan Place,
+  Winnipeg</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1555 Regent Ave.
+  W.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit T77</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Winnipeg</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">MB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">R2C 4J2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2048155745"><span style="text-decoration:none">204-815-5745</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:kildonanplace@mobileklinik.ca"><span style="text-decoration:
+  none">kildonanplace@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">401</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Polo Park,
+  Winnipeg</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1485 Portage
+  Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit Z011A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Winnipeg</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">MB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">R3G 0W4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2042723014"><span style="text-decoration:none">204-272-3014</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:polopark@mobileklinik.ca"><span style="text-decoration:none">polopark@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">402</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Brandon Shoppers
+  Mall</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1570 18th St.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 67</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Brandon</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">MB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">R7A 5C5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2046500022"><span style="text-decoration:none">204-650-0022</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:ShoppersMall@mobileklinik.ca"><span style="text-decoration:none">ShoppersMall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">500</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Champlain Mall,
+  Moncton</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">477 Paul St.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit Q004A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Dieppe</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">NB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">E1A 4X5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5063170419"><span style="text-decoration:none">506-317-0419</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:champlainmall@mobileklinik.ca"><span style="text-decoration:
+  none">champlainmall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">501</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">McAllister
+  Place, Saint John</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">519 Westmorland
+  Road</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit C001A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Saint John</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">NB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">E2J 3W9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5067992307"><span style="text-decoration:none">506-799-2307</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:mcallisterplace@mobileklinik.ca"><span style="text-decoration:
+  none">mcallisterplace@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">502</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Walmart
+  Fredericton</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1399 Regent St.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 360</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Fredericton</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">NB</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">E3C 1A3</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:5064429064"><span style="text-decoration:none">506-442-9064</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:wmfrederictons@mobileklinik.ca"><span style="text-decoration:
+  none">wmfrederictons@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">600</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Avalon, St.
+  Johns</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">48 Kenmount Road</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 0335</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">St. John"s</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">NL</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">A1B 1W3</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7098005265"><span style="text-decoration:none">709-800-5265</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:avalonmall@mobileklinik.ca"><span style="text-decoration:none">avalonmall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">601</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Corner Brook,
+  Newfoundland<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7518220 width=269 style="border-top:none;border-left:none;
+  width:202pt">44 Maple Valley Road&#8203;</td>
+  <td class=xl7518220 width=119 style="border-top:none;border-left:none;
+  width:89pt">Unit 05061</td>
+  <td class=xl7518220 width=200 style="border-top:none;border-left:none;
+  width:150pt">Corner Brook</td>
+  <td class=xl8818220 width=71 style="border-top:none;border-left:none;
+  width:53pt">NL</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">A2H 6L8</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7099853072"><span style="text-decoration:none">709-985-3072</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:cornerbrookmall@mobileklinik.ca"><span style="text-decoration:
+  none">cornerbrookmall@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">700</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Midtown Plaza,
+  Saskatoon</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">201 1 Ave. S.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 272</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Saskatoon</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">SK</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">S7K 1J9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:3068081929"><span style="text-decoration:none">306-808-1929</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:midtownplaza@mobileklinik.ca"><span style="text-decoration:none">midtownplaza@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">701</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Grasslands
+  Regina</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">4625 Gordon Road</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 6</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Regina</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">SK</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">S7K 1J9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:3062058172"><span style="text-decoration:none">306-205-8172</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:grasslandsregina@mobileklinik.ca"><span style="text-decoration:
+  none">grasslandsregina@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">800</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Pacific Centre,
+  Vancouver</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">701 West Georgia
+  Street</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit H034A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Vancouver</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V6E 1B5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6049094130"><span style="text-decoration:none">604-909-4130</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:paccentre@mobileklinik.ca"><span style="text-decoration:none">paccentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr class=xl6618220 height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">801</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Guildford Town
+  Centre, Surrey</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">10355 152 Street</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 2636</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Surrey</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V3R 7C1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7787350997"><span style="text-decoration:none">778-735-0997</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:guildford@mobileklinik.ca"><span style="text-decoration:none">guildford@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr class=xl6618220 height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">802</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Orchard Park,
+  Kelowna</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">2271 Harvey
+  Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 0360</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Kelowna</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V1Y 6H2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2509803382"><span style="text-decoration:none">250-980-3382</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:orchardpark@mobileklinik.ca"><span style="text-decoration:none">orchardpark@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr class=xl6618220 height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">803</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Metropolis at
+  Metrotown, Burnaby</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">4800 Kingsway
+  #312</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit F5</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Burnaby</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V5H 4J2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6042150869"><span style="text-decoration:none">604-215-0869</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:metrotown@mobileklinik.ca"><span style="text-decoration:none">metrotown@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr class=xl6618220 height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">804</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Willowbrook
+  Centre, Langley</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">19705 Fraser Hwy</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 115A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Langley</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V3A 7E9</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7782183984"><span style="text-decoration:none">778-218-3984</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:willowbrook@mobileklinik.ca"><span style="text-decoration:none">willowbrook@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">805</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Park Royal, West
+  Vancouver</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">2002 Park Royal
+  S.</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 2024</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">West Vancouver</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V7T 2W4</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:7782808628"><span style="text-decoration:none">778-280-8628</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:parkroyal@mobileklinik.ca"><span style="text-decoration:none">parkroyal@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">806</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Sevenoaks
+  Centre, Abbotsford<span style="mso-spacerun:yes">�</span></td>
+  <td class=xl7218220 style="border-top:none;border-left:none">32900 S Fraser
+  Way</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 322</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Abbotsford</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V2S 5A1</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:6047561369"><span style="text-decoration:none">604-756-1369</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:sevenoaks@mobileklinik.ca"><span style="text-decoration:none">sevenoaks@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">807</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Hillside,
+  Victoria</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">1644 Hillside
+  Avenue</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 106A</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Victoria</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V8T 2C5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2364788680"><span style="text-decoration:none">236-478-8680</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:hillside@mobileklinik.ca"><span style="text-decoration:none">hillside@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr height=20 style="height:15.0pt">
+  <td height=20 class=xl8018220 width=95 style="height:15.0pt;border-top:none;
+  width:71pt">808</td>
+  <td class=xl7018220 width=367 style="border-top:none;border-left:none;
+  width:275pt">Royal City Centre, New Westminster</td>
+  <td class=xl7318220 style="border-top:none;border-left:none">610 6th St #115</td>
+  <td class=xl7318220 style="border-top:none;border-left:none">Unit 121</td>
+  <td class=xl7318220 style="border-top:none;border-left:none">New Westminster</td>
+  <td class=xl8618220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V3L 3C2</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2364764820"><span style="text-decoration:none">236-476-4820</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:newwestminster@mobileklinik.ca"><span style="text-decoration:
+  none">newwestminster@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr class=xl6618220 height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">809</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Woodgrove,
+  Nanaimo</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">6631 Island Hwy</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 106</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Nanaimo</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V9T 4T7</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2507396100"><span style="text-decoration:none">250-739-6100</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:woodgrove@mobileklinik.ca"><span style="text-decoration:none">woodgrove@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr class=xl6618220 height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">812</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Coquitlam Centre</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">2929 Barnet Hwy</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 2430</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Coquitlam</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V3B 5R5</td>
+  <td class=xl9418220 style="border-top:none;border-left:none"><a
+  href="tel:2505616401"><span style="text-decoration:none">250-561-6401</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:coquitlamcentre@mobileklinik.ca"><span style="text-decoration:
+  none">coquitlamcentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr class=xl6618220 height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">813</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Pine Centre</td>
+  <td class=xl7518220 width=269 style="border-top:none;border-left:none;
+  width:202pt">3055 Massey Dr Suite 156</td>
+  <td class=xl7518220 width=119 style="border-top:none;border-left:none;
+  width:89pt">Unit 89</td>
+  <td class=xl7518220 width=200 style="border-top:none;border-left:none;
+  width:150pt">Prince George</td>
+  <td class=xl8818220 width=71 style="border-top:none;border-left:none;
+  width:53pt">BC</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">V2N 2S9</td>
+  <td class=xl9618220><a href="tel:2364772390"><span style="text-decoration:
+  none">236-477-2390</span></a></td>
+  <td class=xl6818220 style="border-top:none"><a
+  href="mailto:pinecentre@mobileklinik.ca"><span style="text-decoration:none">pinecentre@mobileklinik.ca</span></a></td>
+ </tr>
+ <tr class=xl6618220 height=20 style="height:15.0pt">
+  <td height=20 class=xl8118220 style="height:15.0pt;border-top:none">900</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Halifax Shopping
+  Centre</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">7001 Mumford
+  Road</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Unit 116B</td>
+  <td class=xl7218220 style="border-top:none;border-left:none">Halifax</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">NS</td>
+  <td class=xl8518220 style="border-top:none;border-left:none">B3L 4R3</td>
+  <td class=xl9418220 style="border-left:none"><a href="tel:9029826623"><span
+  style="text-decoration:none">902-982-6623</span></a></td>
+  <td class=xl6818220 style="border-top:none;border-left:none"><a
+  href="mailto:hsc@mobileklinik.ca"><span style="text-decoration:none">hsc@mobileklinik.ca</span></a></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style="display:none">
+  <td width=95 style="width:71pt"></td>
+  <td width=367 style="width:275pt"></td>
+  <td width=269 style="width:202pt"></td>
+  <td width=119 style="width:89pt"></td>
+  <td width=200 style="width:150pt"></td>
+  <td width=71 style="width:53pt"></td>
+  <td width=115 style="width:86pt"></td>
+  <td width=130 style="width:98pt"></td>
+  <td width=293 style="width:220pt"></td>
+ </tr>
+ <![endif]>
+</table>
+-->
+            
+          </div>
+        
+      </div>
+      
+      
+      <div class="darkMode">
+        <div class="custom-control custom-switch" data-toggle="tooltip" title="Dark Mode" data-placement="left">
+          <input type="checkbox" class="custom-control-input custom-switch" id="darkSwitch">
+          <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+      </div>
+      <footer class="footer">
+          <hr class="footer-line">
+          <div>
+            Created by: <a href="mailto:support@mktools.ca" data-toggle="popover" title="Approved Links" data-content="Click <a href='/pages/links.html'>here</a> for the approved links." data-original-title="Approved Links">Kerr Almario</a><br>
+            Mobile Klinik Professional Smartphone Repair
+            <ul>
+                <li><a href="https://mktools.glitch.me">HOME</a></li> |
+                <li><a href="/pages/forms.html">FORMS</a></li> |
+                <li><a href="/pages/tools.html">TOOLS</a></li> |
+                <li><a href="/pages/stores.html">STORES</a></li> |
+                <li><a href="/pages/about.html">ABOUT</a></li>
+            </ul>
+          </div>
+      </footer>
+      
+      <!--
+      <link rel="stylesheet" href="../css/snow.css"/>
+      <script src="/js/snow.js"></script>
+      <div id="snow"></div>
+      -->
+      
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5f835c974704467e89f68285/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+      <!--End of Tawk.to Script-->
+      
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="/js/dark-mode-switch.min.js"></script>
+  </body>
+</html>

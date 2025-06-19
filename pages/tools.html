@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36315103-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-36315103-4');
+    </script>
+
+    <title>MK Tools</title>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://cdn.glitch.global/221fa3eb-a4d2-40de-bff4-7796f7d5917c/favicon.ico?v=1679553923215" type="images/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ed2e310181.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Libre Barcode 39" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/dark-mode.css"/>
+    <script src="../js/login.js" defer></script>
+  </head>
+  <body>
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login to Tools</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="loginForm"> <!-- form with an ID so we can identify it, now includes both the textbox and the button within it -->
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="modalpass" class="col-form-label">Password:</label>
+                  <input type="password" name="modalpass" class="form-control" id="modalpass">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+          <nav class="navi-link">
+              <a href="https://mktools.ca" alt="MK Tools">
+                <img class="logo-img" src="https://mobileklinik.ca/wp-content/themes/psc/images/logoNewEnglish.png"/>
+              </a>
+              <ul class="navi-link-2">
+                  <li><a href="https://mktools.ca/">Home</a></li>
+                  <li><a href="/pages/forms.html">Forms</a></li>
+                  <li><a href="/pages/tools.html">Tools</a></li>
+                  <li><a href="/pages/stores.html">Stores</a></li>
+                  <li><a href="/pages/about.html">About</a></li>
+              </ul>
+          </nav>
+          <hr class="nav-line"/>
+      </header>
+      <div class="container">
+          <div class="main">
+              <div id="accordion">
+                
+                <h3 class="h3links"><strong>Tools</strong></h3>
+                <!-- GSPN Customer -->
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        G<span class="small-upper">SPN ID</span> B<span class="small-upper">arcodes</span>
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body bcode-body bcode-body-bg">
+                      <div class="form-row">
+                          <div class="col">
+                            <h5><b>ASURION</b></h5>
+                            Asurion Asurion<br/>
+                            176 Front Street East, Unit 200,<br> Toronto, ON, M5A 1E6<br/>
+                            866-281-4537<br/>
+                            <b>5550252260</b><br/>
+                            <span class="barcode">*5550252260*</span>                            
+                          </div>
+                          <div class="col">
+                            <h5><b>ASSURANT</b></h5>
+                            Assurant Assurant<br/>
+                            5000 Yonge Street, Unit 2000,<br> Toronto, ON, M2N 7E9<br/>
+                            assurant@assurant.ca | 647-222-2222<br/>
+                            <b>5544744201</b><br/>
+                            <span class="barcode">*5544744201*</span>
+                          </div>
+                          <div class="col">
+                            <h5><b>BRIGHTSTAR</b></h5>
+                            Brightstar Brightstar<br/>
+                            176 Front Street East, Unit 200,<br> Toronto, ON, M5A 1E6<br/>
+                            SECA@samsung.com | 647-111-1111<br/>
+                            <b>5531038933</b><br/>
+                            <span class="barcode">*5531038933*</span>
+                          </div>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <!-- GSPN Customer -->
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        D<span class="small-upper">ownloads</span>
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body bcode-body">
+                      <div class="form-row">
+                        <div class="col">
+                          <h6>LG SELF DIAGNOSTIC TOOL</h6>
+                          <a href="https://cdn.glitch.com/221fa3eb-a4d2-40de-bff4-7796f7d5917c%2FSelf-Diagnosis-v3.3(G011C-Newpackaging).apk?v=1613518582197" download>
+                                <button class="btn btn-outline-danger" id="mkformbtn5"><i class="fa fa-download"></i> Download</button>
+                            </a>
+                        </div>
+                        <div class="col">
+                          <h6>P.O. Trimmer v1.0.1.2</h6>
+                          <a href="https://www.dropbox.com/s/6f8kcmric8e0p77/PO%20Trimmer.exe?dl=0" target="_blank" download>
+                              <button class="btn btn-outline-danger" id="mkformbtn5"><i class="fa fa-download"></i> Download</button>
+                          </a>
+                        </div>
+                        <div class="col">
+                          <h6>P.O. Trimmer for Mac (SECA Only) - Luke W.</h6>
+                          <a href="https://www.icloud.com/shortcuts/9e04f64c4544491c84cb9ab0563ca1e3" target="_blank" download>
+                              <button class="btn btn-outline-danger" id="mkformbtn5"><i class="fa fa-download"></i> Download</button>
+                          </a>
+                        </div>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                
+                
+                
+              </div> <!-- closing div .accordion -->
+          </div> <!-- closing div .main -->
+      </div> <!-- closing div .container -->
+      <div class="darkMode">
+        <div class="custom-control custom-switch" data-toggle="tooltip" title="Dark Mode" data-placement="left">
+          <input type="checkbox" class="custom-control-input custom-switch" id="darkSwitch">
+          <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+      </div>
+      <footer class="footer">
+          <hr class="footer-line">
+          <div>
+            Created by: <a href="mailto:support@mktools.ca" data-toggle="popover" title="Approved Links" data-content="Click <a href='/pages/links.html'>here</a> for the approved links." data-original-title="Approved Links">Kerr Almario</a><br>
+            Mobile Klinik Professional Smartphone Repair
+            <ul>
+                <li><a href="https://mktools.glitch.me">HOME</a></li> |
+                <li><a href="/pages/forms.html">FORMS</a></li> |
+                <li><a href="/pages/tools.html">TOOLS</a></li> |
+                <li><a href="/pages/stores.html">STORES</a></li> |
+                <li><a href="/pages/about.html">ABOUT</a></li>
+            </ul>
+          </div>
+      </footer>
+        
+      <!--
+      <link rel="stylesheet" href="../css/snow.css"/>
+      <script src="/js/snow.js"></script>
+      <div id="snow"></div>
+      -->
+      
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5f835c974704467e89f68285/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+      <!--End of Tawk.to Script-->
+    
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="/js/dark-mode-switch.min.js"></script>
+  </body>
+</html>

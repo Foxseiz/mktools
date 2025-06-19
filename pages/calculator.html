@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36315103-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-36315103-4');
+    </script>
+
+    <title>MK Tools</title>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://cdn.glitch.global/221fa3eb-a4d2-40de-bff4-7796f7d5917c/favicon.ico?v=1679553923215" type="images/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ed2e310181.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/calculator.css"/>
+    <link rel="stylesheet" href="../css/dark-mode.css"/>
+  </head>
+  <body>
+      <header class="header">
+          <nav class="navi-link">
+              <a href="https://mktools.ca" alt="MK Tools">
+                <img class="logo-img" src="https://mobileklinik.ca/wp-content/themes/psc/images/logoNewEnglish.png"/>
+              </a>
+              <ul class="navi-link-2">
+                  <li><a href="https://mktools.ca/">Home</a></li>
+                  <li><a href="/pages/forms.html">Forms</a></li>
+                  <li><a href="/pages/barcodes.html">Barcodes</a></li>
+                  <li><a href="/pages/todo.html">Todo</a></li>
+                  <li><a href="/pages/about.html">About</a></li>
+              </ul>
+          </nav>
+          <hr class="nav-line"/>
+      </header>
+      <div class="container">
+          <div class="main">
+            <!-- https://codepen.io/zellwk/pen/xWRWNB
+                 https://zellwk.com/blog/calculator-part-3/
+                 https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
+                 https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
+            -->
+            <div class="calculator">
+              <div class="calculator__display">0</div>
+
+              <div class="calculator__keys">
+                <button class="key--operator" data-action="add">+</button>
+                <button class="key--operator" data-action="subtract">-</button>
+                <button class="key--operator" data-action="multiply">&times;</button>
+                <button class="key--operator" data-action="divide">÷</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>0</button>
+                <button data-action="decimal">.</button>
+                <button data-action="clear">AC</button>
+                <button class="key--equal" data-action="calculate">=</button>
+              </div>
+            </div>
+            
+          </div>
+      </div>
+      <div class="darkMode">
+        <div class="custom-control custom-switch" data-toggle="tooltip" title="Dark Mode" data-placement="left">
+          <input type="checkbox" class="custom-control-input custom-switch" id="darkSwitch">
+          <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+      </div>
+      <footer class="footer">
+          <hr class="footer-line">
+          <div>
+            Created by: <a href="mailto:support@mktools.ca" data-toggle="popover" title="Approved Links" data-content="Click <a href='/pages/links.html'>here</a> for the approved links." data-original-title="Approved Links">Kerr Almario</a><br>
+            Mobile Klinik Professional Smartphone Repair
+            <ul>
+                <li><a href="https://mktools.glitch.me">HOME</a></li> |
+                <li><a href="/pages/forms.html">FORMS</a></li> |
+                <li><a href="/pages/barcodes.html">BARCODES</a></li> |
+                <li><a href="/pages/todo.html">TODO</a></li> |
+                <li><a href="/pages/about.html">ABOUT</a></li>
+            </ul>
+          </div>
+      </footer>
+    
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="/js/dark-mode-switch.min.js"></script>
+      <script src="/js/calculator.js"></script>
+  </body>
+</html>

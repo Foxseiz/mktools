@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36315103-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-36315103-4');
+    </script>
+
+    <title>MK Tools</title>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://cdn.glitch.global/221fa3eb-a4d2-40de-bff4-7796f7d5917c/favicon.ico?v=1679553923215" type="images/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ed2e310181.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/dark-mode.css"/>
+    <script src="../js/login.js" defer></script>
+  </head>
+  <body>
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login to Links</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="loginForm"> <!-- form with an ID so we can identify it, now includes both the textbox and the button within it -->
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="modalpass" class="col-form-label">Password:</label>
+                  <input type="password" name="modalpass" class="form-control" id="modalpass">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+          <nav class="navi-link">
+              <a href="https://mktools.ca" alt="MK Tools">
+                <img class="logo-img" src="https://mobileklinik.ca/wp-content/themes/psc/images/logoNewEnglish.png"/>
+              </a>
+              <ul class="navi-link-2">
+                  <li><a href="https://mktools.ca/">Home</a></li>
+                  <li><a href="/pages/forms.html">Forms</a></li>
+                  <li><a href="/pages/links.html">Links</a></li>
+                  <li><a href="/pages/tools.html">Tools</a></li>
+                  <li><a href="/pages/stores.html">Stores</a></li>
+                  <li><a href="/pages/about.html">About</a></li>
+              </ul>
+          </nav>
+          <hr class="nav-line"/>
+      </header>
+      <div class="container">
+          <div class="main">
+              <h3 class="h3links"><strong>Approved Links</strong></h3>
+              <div id="accordion">
+                
+                <!-- Suppliers -->
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        S<span class="small-upper">uppliers</span>
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="https://www.mobilesentrix.ca/" target="_blank"><input type="button" class="btn btn-danger" value="Mobile Sentrix"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.nexuscellular.com/" target="_blank"><input type="button" class="btn btn-danger" value="Nexus Cellular"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.eway.ca/" target="_blank"><input type="button" class="btn btn-danger" value="Staples Eway"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://shop.cesiumonline.com/" target="_blank"><input type="button" class="btn btn-danger" value="Cesium"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://hitfar.com/" target="_blank"><input type="button" class="btn btn-danger" value="Hitfar"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.uline.ca/" target="_blank"><input type="button" class="btn btn-danger" value="Uline"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.etradesupply.com/" target="_blank"><input type="button" class="btn btn-danger" value="eTrade Supply"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="http://www.eriksonconsumer.com/" target="_blank"><input type="button" class="btn btn-danger" value="Erikson"/></a>
+                          </div>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Operations -->
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        O<span class="small-upper">perations</span>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="https://gsfsplus-america.lge.com/nxui/index.html" target="_blank"><input type="button" class="btn btn-primary" value="GSFS+"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://canr56.dayforcehcm.com/MyDayforce/MyDayforce.aspx" target="_blank"><input type="button" class="btn btn-primary" value="Dayforce"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://mobileklinik.repairq.io/site/login" target="_blank"><input type="button" class="btn btn-primary" value="RepairQ"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://mobileklinik-sandbox.repairq.io/site/login" target="_blank"><input type="button" class="btn btn-primary" value="RepairQ Sandbox"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://quickunlockr.com/" target="_blank"><input type="button" class="btn btn-primary" value="Quick Unlocker"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="http://www.mkgo.ca/member/signin/?pageUrl=/" target="_blank"><input type="button" class="btn btn-primary" value="MKGO"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="http://mobileklinik.litmos.com" target="_blank"><input type="button" class="btn btn-primary" value="LMS"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.dropbox.com/?landing=dbv2" target="_blank"><input type="button" class="btn btn-primary" value="Dropbox"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://360hub.berkeleypayment.com/#/login" target="_blank"><input type="button" class="btn btn-primary" value="Berkeley"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://mkadmin.trucash.com" target="_blank"><input type="button" class="btn btn-primary" value="TruCash"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://app.paybright.com" target="_blank"><input type="button" class="btn btn-primary" value="Paybright"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://cellbie.com/mkpricechecker" target="_blank"><input type="button" class="btn btn-primary" value="MK Price Check"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://mobileklinikappts.coconutcalendar.com/dashboard" target="_blank"><input type="button" class="btn btn-primary" value="Coconut"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://mobileklinik.coconutcalendar.com/dashboard" target="_blank"><input type="button" class="btn btn-primary" value="Coconut Van"/></a>
+                          </div>
+                      </div>
+                      
+                      <hr>
+                      <h5>A<span class="small-upper">pple</span></h5>
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="http://gsx2.apple.com/" target="_blank"><input type="button" class="btn btn-primary" value="GSX"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://atlas.apple.com/" target="_blank"><input type="button" class="btn btn-primary" value="Atlas LMS"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://certifications.apple.com/" target="_blank"><input type="button" class="btn btn-primary" value="Certifications"/></a>
+                          </div>
+                      </div>
+                      
+                      <hr>
+                      <h5>S<span class="small-upper">amsung</span></h5>
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="http://gspn3.samsungcsportal.com/index.jsp" target="_blank"><input type="button" class="btn btn-primary" value="GSPN"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://support-us.samsung.com/stg/login" target="_blank"><input type="button" class="btn btn-primary" value="Samsung STG"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://wireless.samsungsvc.ca/login.jsp" target="_blank"><input type="button" class="btn btn-primary" value="Samsung SVC"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.futuretel.ca/" target="_blank"><input type="button" class="btn btn-primary" value="Futuretel"/></a>
+                          </div>
+                      </div>
+                      
+                      <hr>
+                      <h5>H<span class="small-upper">uawei</span></h5>
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="http://app.huawei.com/cspmportal/" target="_blank"><input type="button" class="btn btn-primary" value="CSPM"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://uniportal.huawei.com/uniportal/?redirect=http%3A%2F%2Fconsumer-tkb.huawei.com%2Fweknow%2F" target="_blank"><input type="button" class="btn btn-primary" value="WeKnow"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://uniportal-beta.huawei.com/uniportal/?redirect=https%3A%2F%2Funiportal-beta.huawei.com%2Fsaaslogin%2Fsp%3Fp%3DRkY1V3g1N2FTNDJDaVVYeTJSeG14OUF1UGVITTJHYlVpMWpBUVE3SDFFTk9uNzlKMXo2NjJibjBSalNBbjFWMTk5RlVwa0xIT1FzMU1UVXBJd3A5d0c3NVNVMDZXNG8xZ0lBQ3VlNlowSUhEeGYyZlkvSTRvd201VC80cUlhOW8xcFl6S0x0VGRUMD0%3D%26RelayState%3D97879968-0f72-41ed-96d5-753c6e3e1a72%26pname%3Dhttp%3A%2F%2Fccareuat1-sts.huawei.com%2Fservices%2Ftrust-pend&msg=1&v=v3.39" target="_blank"><input type="button" class="btn btn-primary" value="CCP Test Site"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://ccare3.crm.huawei.com/" target="_blank"><input type="button" class="btn btn-primary" value="CCP Production"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://consumer.huawei.com/ca/support/warranty-query/" target="_blank"><input type="button" class="btn btn-primary" value="Warranty IMEI"/></a>
+                          </div>
+                      </div>    
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Couriers -->
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        C<span class="small-upper">ouriers</span>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="https://www.purolator.com/en/home.page" target="_blank"><input type="button" class="btn btn-warning" value="Purolator"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.fedex.com/en-ca/shipping.html" target="_blank"><input type="button" class="btn btn-warning" value="FedEx"/></a>
+                          </div>
+                      </div>      
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Manufacturers -->
+                <div class="card">
+                  <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        M<span class="small-upper">anufacturers</span>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="https://www.apple.com/ca/" target="_blank"><input type="button" class="btn btn-info" value="Apple"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="" target="_blank"><input type="button" class="btn btn-info" value="Blackberry"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://store.google.com/category/phones" target="_blank"><input type="button" class="btn btn-info" value="Google"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.huawei.com/ca/" target="_blank"><input type="button" class="btn btn-info" value="Huawei"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.lg.com/ca_en" target="_blank"><input type="button" class="btn btn-info" value="LG"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.motorola.ca/" target="_blank"><input type="button" class="btn btn-info" value="Motorola"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://www.samsung.com/ca/" target="_blank"><input type="button" class="btn btn-info" value="Samsung"/></a>
+                          </div>
+                      </div>     
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Forums / Guides -->
+                <div class="card">
+                  <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        F<span class="small-upper">orums</span> / G<span class="small-upper">uides</span>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="https://www.ifixit.com/" target="_blank"><input type="button" class="btn btn-secondary" value="iFixit"/></a>
+                          </div>
+                      </div>      
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Messaging -->
+                <div class="card">
+                  <div class="card-header" id="headingSix">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        O<span class="small-upper">ther</span>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="form-row">
+                          <div class="col">
+                            <a href="https://mobileklinik.slack.com/" target="_blank"><input type="button" class="btn btn-success" value="Slack"/></a>
+                          </div>
+                          <div class="col">
+                            <a href="https://mail.mobileklinik.ca/owa" target="_blank"><input type="button" class="btn btn-success" value="Mail"/></a>
+                          </div>
+                      </div>      
+                    </div>
+                  </div>
+                </div>
+                
+              </div> <!-- closing div .accordion -->
+          </div> <!-- closing div .main -->
+      </div> <!-- closing div .container -->
+      <div class="darkMode">
+        <div class="custom-control custom-switch" data-toggle="tooltip" title="Dark Mode" data-placement="left">
+          <input type="checkbox" class="custom-control-input custom-switch" id="darkSwitch">
+          <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+      </div>
+      <footer class="footer">
+          <hr class="footer-line">
+          <div>
+            Created by: <a href="mailto:support@mktools.ca" data-toggle="popover" title="Approved Links" data-content="Click <a href='/pages/links.html'>here</a> for the approved links." data-original-title="Approved Links">Kerr Almario</a><br>
+            Mobile Klinik Professional Smartphone Repair
+            <ul>
+                <li><a href="https://mktools.glitch.me">HOME</a></li> |
+                <li><a href="/pages/forms.html">FORMS</a></li> |
+                <li><a href="/pages/links.html">LINKS</a></li> |
+                <li><a href="/pages/tools.html">TOOLS</a></li> |
+                <li><a href="/pages/stores.html">STORES</a></li> |
+                <li><a href="/pages/about.html">ABOUT</a></li>
+            </ul>
+          </div>
+      </footer>
+    
+      <!--
+      <link rel="stylesheet" href="../css/snow.css"/>
+      <script src="/js/snow.js"></script>
+      <div id="snow"></div>
+      -->
+      
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5f835c974704467e89f68285/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+      <!--End of Tawk.to Script-->
+    
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="/js/dark-mode-switch.min.js"></script>
+  </body>
+</html>

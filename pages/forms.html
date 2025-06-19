@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36315103-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-36315103-4');
+    </script>
+    
+    <title>Forms - MK Tools</title>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://cdn.glitch.global/221fa3eb-a4d2-40de-bff4-7796f7d5917c/favicon.ico?v=1679553923215" type="images/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="../js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ed2e310181.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/dark-mode.css"/>
+    <script src="../js/login.js" defer></script>
+  </head>
+  <body>
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login to Forms</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="loginForm"> <!-- form with an ID so we can identify it, now includes both the textbox and the button within it -->
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="modalpass" class="col-form-label">Password:</label>
+                  <input type="password" name="modalpass" class="form-control" id="modalpass">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+          <nav class="navi-link">
+              <a href="https://mktools.ca" alt="MK Tools">
+                <img class="logo-img" src="https://mobileklinik.ca/wp-content/themes/psc/images/logoNewEnglish.png"/>
+              </a>
+              <ul class="navi-link-2">
+                  <li><a href="https://mktools.ca/">Home</a></li>
+                  <li><a href="/pages/forms.html">Forms</a></li>
+                  <li><a href="/pages/links.html">Links</a></li>
+                  <li><a href="/pages/tools.html">Tools</a></li>
+                  <li><a href="/pages/stores.html">Stores</a></li>
+                  <li><a href="/pages/about.html">About</a></li>
+              </ul>
+          </nav>
+          <hr class="nav-line"/>
+      </header>
+      <div class="container">
+          <div class="main">
+              <div class="nav-center">
+                  <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="catalog_request-tab" data-toggle="tab" href="#catalog_request" role="tab" aria-controls="catalog_request" aria-selected="true">Catalog Entry Request</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="urgent_order-tab" data-toggle="tab" href="#urgent_order" role="tab" aria-controls="urgent_order" aria-selected="false">Special/Urgent Order</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="shipping_discrepancy-tab" data-toggle="tab" href="#shipping_discrepancy" role="tab" aria-controls="shipping_discrepancy" aria-selected="false">Shipping Discrepancy</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="samsung_gspn-tab" data-toggle="tab" href="#samsung_gspn" role="tab" aria-controls="samsung_gspn" aria-selected="false">GSPN Requests</a>
+                      </li>
+                      <!---<li class="nav-item">
+                          <a class="nav-link" id="new_hire-tab" data-toggle="tab" href="#new_hire" role="tab" aria-controls="new_hire" aria-selected="false">New Hire Form</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="ppe-tab" data-toggle="tab" href="#ppe" role="tab" aria-controls="ppe" aria-selected="false">PPE Request</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="repair_model-tab" data-toggle="tab" href="#repair_model" role="tab" aria-controls="repair_model" aria-selected="false">Repair Model</a>
+                      </li>-->
+                  </ul>
+              </div>
+              <div class="reqforms">
+                  <div class="tab-content" id="myTabContent">
+                      <!-- RQ Catalog Item Request -->
+                      <div class="tab-pane fade show active" id="catalog_request" role="tabpanel" aria-labelledby="catalog_request-tab">       
+                          <p><h3>RQ Catalog Item Request</h3></p>
+                          <p>
+                              <!--<i>Download the spreadsheet and fill with your request, then upload below.</i><br>
+                              <a href="https://cdn.glitch.com/221fa3eb-a4d2-40de-bff4-7796f7d5917c%2FCatalogue%20Request%20Form.xlsx?v=1584683508714" download>
+                                  <button class="btn btn-outline-danger" id="mkformbtn5"><i class="fa fa-download"></i> Download</button>
+                              </a>-->
+                            <div class="form-row">
+                              <div class="col">
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWDwrLhg70xKLAOrtlAA1aWjZbNtTf1FKMAimAdwxjRQ8MFQ/viewform?embedded=true" width="640" height="1350" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                              </div>
+                            </div>
+                          </p>
+                          <!--
+                              <form method="post" action="https://formspree.io/xbjgaayw" enctype="multipart/form-data" autocomplete="off">  
+                             <div class="form-row">
+                                <div class="col">
+                                  <label for="partTech">Name <span class="askReq">*</span></label>
+                                  <input type="text" class="form-control" id="partTech" placeholder="Your Name" name="Name" required>
+                                </div>
+                                <div class="col">
+                                  <label for="partStore">Store <span class="askReq">*</span></label>
+                                  <input type="text" class="form-control" id="partStore" placeholder="Store Name" name="Store" required>
+                                </div>
+                              </div>
+
+                              <div class="form-group" style="margin: 10px 0 15px;">
+                                <label for="partNotes">Notes</label>
+                                <textarea class="form-control" id="partNotes" name="Notes" rows="3"></textarea>
+                              </div>
+                          -->
+                              
+                            <!-- Upload File -->
+                              <!--
+                                  <div class="custom-file" style="text-align: left; margin-bottom: 15px;">
+                                  <input type="file" class="bs-custom-file-input custom-file-input" id="customFile" name="upload" accept=".xlsx,.xls" required>
+                                  <label class="bs-custom-file-label custom-file-label" for="customFile">Choose file</label>
+                              </div>
+                              <script type="application/javascript">
+                                  $('input[type="file"]').change(function(e){
+                                      var fileName = e.target.files[0].name;
+                                      $('.custom-file-label').html(fileName);
+                                  });
+                              </script>
+                              -->
+                              
+                              <!-- Email's Subject -->
+                    <!--
+                              <input type="hidden" name="_subject" value="New! Catalog Item Request" />
+                              <input type="hidden" name="_cc" value="inventory@mobileklinik.ca, ivor.jennings@mobileklinik.ca, youssef.botros@mobileklinik.ca" />
+
+                              <button type="submit" class="btn btn-outline-danger" id="mkformbtn1">Submit</button>
+                              <button type="reset" class="btn btn-outline-danger" id="mkformbtn2">Reset</button>
+                          </form>
+                    -->
+                      </div> <!-- Catalog Item Request closing div -->
+    
+                      <!-- MS Urgent Order -->
+                      <div class="tab-pane fade" id="urgent_order" role="tabpanel" aria-labelledby="urgent_order-tab">
+                          <p><h3>Special - Urgent Order</h3></p>
+                          <p>
+                            <div class="form-row">
+                              <div class="col">
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdTGGMX1-uB__lYcMA8sCywGd320m-2w51TBkKxcZx1VtQoA/viewform?embedded=true" width="640" height="1610" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                              </div>
+                            </div>
+                          </p> <!-- MS Urgent Order -->
+                      </div>
+    
+                      <!-- Shipping Discrepancy -->
+                      <div class="tab-pane fade" id="shipping_discrepancy" role="tabpanel" aria-labelledby="shipping_discrepancy-tab">
+                          <p><h3>Shipping Discrepancy</h3></p>
+                          <p>
+                            <div class="form-row">
+                              <div class="col">
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhBSHxWyeEVzJesxrsqZqEqL9a_xLBYPiNWlKemq4ohBm_GA/viewform?embedded=true" width="640" height="540" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                              </div>
+                            </div>
+                          </p>
+                      </div> <!-- Shipping Discrepancy -->
+    
+                      <!-- Samsung GSPN Request -->
+                      <div class="tab-pane fade" id="samsung_gspn" role="tabpanel" aria-labelledby="samsung_gspn-tab">
+                          <p><h3>Samsung GSPN Requests</h3></p>
+                          <p>
+                            <div class="form-row">
+                              <div class="col">
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSds6NBS2b8b-jvqqH8xFJyJqBivIeIQYNopvryc2sauSsyhDg/viewform?embedded=true" width="640" height="1350" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                              </div>
+                            </div>
+                          </p>
+                      </div> <!-- Samsung GSPN closing div -->
+                  
+                      <!-- New Hire Form -->
+                      <div class="tab-pane fade" id="new_hire" role="tabpanel" aria-labelledby="new_hire-tab">       
+                          <p><h3>New Hire Form</h3></p>
+                          <p>
+                              <i>Download the PDF and fill the required information, then upload below.</i><br>
+                              <a href="https://cdn.glitch.com/221fa3eb-a4d2-40de-bff4-7796f7d5917c%2FMK%20New%20Hire%20%20Form.pdf?v=1614957863138" download>
+                                  <button class="btn btn-outline-danger" id="mkformbtn6"><i class="fa fa-download"></i> Download</button>
+                              </a>
+                          </p>
+                          <form method="post" action="" enctype="multipart/form-data" autocomplete="off">  
+                             
+                                <div class="form-group" style="margin: 10px 0 15px;">
+                                  <label for="partNotes">Notes</label>
+                                  <textarea class="form-control" id="hireNotes" name="Notes" rows="3"></textarea>
+                                </div>
+                              
+                              <!-- Upload File -->
+                                <div class="custom-file" style="text-align: left; margin-bottom: 15px;">
+                                    <input type="file" class="bs-custom-file-input custom-file-input" id="customFile1" name="upload" accept=".pdf" required>
+                                    <label class="bs-custom-file-label custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                                <script type="application/javascript">
+                                    $('input[type="file"]').change(function(e){
+                                        var fileName1 = e.target.files[0].name;
+                                        $('.custom-file-label').html(fileName1);
+                                    });
+                                </script>
+
+                              <!-- Email's Subject -->
+                              <input type="hidden" name="_subject" value="New Hire Form" />
+                              <input type="hidden" name="_cc" value="youssef.botros@mobileklinik.ca" />
+
+                              <button type="submit" class="btn btn-outline-danger" id="mkformbtn7">Submit</button>
+                              <button type="reset" class="btn btn-outline-danger" id="mkformbtn8">Reset</button>
+                          </form>
+                      </div> <!-- New Hire Form closing div -->
+    
+                      <!-- Incident Report Form -->
+                      <div class="tab-pane fade" id="incident_report" role="tabpanel" aria-labelledby="incident_report-tab">       
+                          <p><h3>Incident Report Form</h3></p>
+                          <p><em>For Reporting Security and Safety Issues</em></p>
+                          <form method="post" action="" autocomplete="off">
+                              <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                      <label for="irEmail">Store Email <span class="askReq">*</span></label>
+                                      <input type="email" class="form-control" id="irEmail" name="Store Email" placeholder="kildonanplace@mobileklinik.ca" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                      <label for="irName">Name of Person Filling Report <span class="askReq">*</span></label>
+                                      <input type="text" class="form-control" id="irName" name="Name" placeholder="" required>
+                                  </div>
+                              </div>
+                              <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                      <label for="irLocation">Store Location <span class="askReq">*</span></label>
+                                      <input type="text" class="form-control" id="irLocation" name="Store Location" placeholder="MK400 - Kildonan Place" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                      <label for="irDateIn">Date of Incident <span class="askReq">*</span></label>
+                                      <input type="date" class="form-control" id="irDateIn" name="Date of Incident" required>
+                                  </div>
+                              </div>
+                              <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                      <label for="irEmpIn">Name of Employee(s) Involved <span class="askReq">*</span></label>
+                                      <input type="text" class="form-control" id="irEmpIn" name="Name of Employee(s) Involved" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                      <label for="irTypeIn">Type of Incident <span class="askReq">*</span></label>
+                                      <select class="form-control" id="irTypeIn" name="Type of Incident" required>
+                                        <option>Security</option>
+                                        <option>Safety</option>
+                                        <option>Other</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-row">
+                                  <div class="form-group col-md-12">
+                                      <label for="irTypeOther">If Other, please explain...</label>
+                                      <input type="text" class="form-control" id="irTypeOther" name="If Other, please explain">
+                                  </div>
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="irNotifRM">Notified RM and/or VP of Operations? <span class="askReq">*</span></label>
+                                      <select class="form-control" id="irNotifRM" name="Notified RM or VP?" required>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="irNotifMall">Notified Store or Mall Security? <span class="askReq">*</span></label>
+                                      <select class="form-control" id="irNotifMall" name="Notified Store or Mall Security?" required>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="irNotifPFA">Notified Police/Fire/Ambulance? <span class="askReq">*</span></label>
+                                      <select class="form-control" id="irNotifPFA" name="Notified Police/Fire/Ambulance?" required>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="irCustIn">Customer Involved? <span class="askReq">*</span></label>
+                                      <select class="form-control" id="irCustIn" name="Customer Involved?" required>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="irDetails">Details of Incident (please elaborate) <span class="askReq">*</span></label>
+                                <textarea class="form-control" id="irDetails" name="Details of Incident" rows="2" required></textarea>
+                              </div>
+                              <div class="form-group">
+                                <label for="irCorrective">Corrective Action Taken <span class="askReq">*</span></label>
+                                <textarea class="form-control" id="irCorrective" name="Corrective Action Taken" rows="2" required></textarea>
+                              </div>
+
+                              <!-- Email's Subject -->
+                              <input type="hidden" name="_subject" value="Incident Report Form" />
+                              <input type="hidden" name="_cc" value="youssef.botros@mobileklinik.ca" />
+
+                              <button type="submit" class="btn btn-outline-danger" id="mkformbtn9">Submit</button>
+                              <button type="reset" class="btn btn-outline-danger" id="mkformbtn10">Reset</button>
+                          </form>
+                      </div> <!-- Incident Report Form closing div -->
+  
+                      <!-- PPE Request -->
+                      <div class="tab-pane fade" id="ppe" role="tabpanel" aria-labelledby="ppe-tab">       
+                          <p><h3>PPE Request Form</h3></p>
+                          <p>
+                              <i>Please request only what you need in the store.</i>
+                          </p>
+                          <form class="ppeform" method="post" action="https://formspree.io/mwkrjqpg" enctype="multipart/form-data" autocomplete="off">  
+                              <div class="ppecontainer">
+                                <div class="ppeformbod">
+                                  <div class="form-group row">
+                                    <div class="form-group col">
+                                      <div class="row">
+                                        <label for="glovesm" class="col-sm-6 col-form-label">Small Gloves</label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control" id="glovesm" placeholder="" value="0" name="Small Gloves" min="0" max="2">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="row">
+                                        <label for="glovemd" class="col-sm-6 col-form-label">Medium Gloves</label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control" id="glovemd" placeholder="" value="0" name="Medium Gloves" min="0" max="2">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <div class="row">
+                                        <label for="glovelg" class="col-sm-6 col-form-label">Large Gloves</label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control" id="glovelg" placeholder="" value="0" name="Large Gloves" min="0" max="2">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group row">
+                                    <div class="form-group col">
+                                      <div class="row">
+                                        <label for="ppesanitizer" class="col-sm-6 col-form-label">Hand Sanitizer</label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control" id="ppesanitizer" placeholder="" value="0" name="Hand Sanitizer" min="0" max="5">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="form-group col">
+                                      <div class="row">
+                                        <label for="ppemask" class="col-sm-6 col-form-label">Masks</label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control" id="ppemask" placeholder="" value="0" name="Masks" min="0" max="5">
+                                        </div>
+                                      </div>
+                                    </div>
+
+
+                                    <div class="form-group col">
+                                      <div class="row">
+                                        <label for="ppegermo" class="col-sm-6 col-form-label">Germosolve</label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control" id="ppegermo" placeholder="" value="0" name="Germosolve" min="0" max="5">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group row">
+                                    <div class="form-group col-4">
+                                      <div class="row">
+                                        <label for="ppeplexi" class="col-sm-6 col-form-label">Plexiglass Guards</label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control" id="ppeplexi" placeholder="" value="0" name="Plexiglass Guards" min="0" max="5">
+                                        </div> 
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group col-4">
+                                      <div class="row">
+                                        <label for="ppedecals" class="col-sm-6 col-form-label">Floor Decals</label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control" id="ppedecals" placeholder="" value="0" name="Floor Decals" min="0" max="5">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="ppeNotes">Notes <span class="askReq">*</span></label>
+                                <textarea class="form-control" id="ppeNotes" name="Notes" rows="2" required></textarea>
+                              </div>
+                              
+                              <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                      <label for="dsStoreName">Store Number & Name <span class="askReq">*</span></label>
+                                      <input type="text" class="form-control" id="ppeStoreName" name="Store" placeholder="MK400 - Kildonan Place" required>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                      <label for="dsStoreEmail">Store Email <span class="askReq">*</span></label>
+                                      <input type="email" class="form-control" id="ppeStoreEmail" name="email" placeholder="store@mobileklinik.ca" required>
+                                  </div>
+                              </div>
+                              
+                              <!-- Email's Subject -->
+                              <input type="hidden" id="ppesubj" name="_subject" />
+                              <!--<input type="hidden" name="_cc" value="ivor.jennings@mobileklinik.ca, doug.prentice@mobileklinik.ca, kevar.richard@mobileklinik.ca, maegan.dukes@mobileklinik.ca" />-->
+
+                              <button type="submit" class="btn btn-outline-danger" id="mkformbtn11">Submit</button>
+                              <button type="reset" class="btn btn-outline-danger" id="mkformbtn12">Reset</button>
+                          </form>
+                      </div> <!-- PPE Request closing div -->
+
+                      <!-- Repair Model Form -->
+                      <div class="tab-pane fade" id="repair_model" role="tabpanel" aria-labelledby="repair_model-tab">       
+                          <p><h3>Repair Model Form</h3></p>
+                          <p>
+                              <i>Download the Excel file and fill the required information, then upload below.</i><br>
+                              <a href="https://cdn.glitch.com/221fa3eb-a4d2-40de-bff4-7796f7d5917c%2FRepair%20Model%20for%20Stores.xlsx?v=1614958556544" download>
+                                  <button class="btn btn-outline-danger" id="mkformbtn13"><i class="fa fa-download"></i> Download</button>
+                              </a>
+                          </p>
+                          <form method="post" action="" enctype="multipart/form-data" autocomplete="off">  
+                             
+                                <div class="form-group" style="margin: 10px 0 15px;">
+                                  <label for="repairNotes">Notes</label>
+                                  <textarea class="form-control" id="repairNotes" name="Notes" rows="3"></textarea>
+                                </div>
+                              
+                              <!-- Upload File -->
+                                <div class="custom-file" style="text-align: left; margin-bottom: 15px;">
+                                    <input type="file" class="bs-custom-file-input custom-file-input" id="customFile2" name="upload" accept=".xlsx, .xls" required>
+                                    <label class="bs-custom-file-label custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                                <script type="application/javascript">
+                                    $('input[type="file"]').change(function(e){
+                                        var fileName1 = e.target.files[0].name;
+                                        $('.custom-file-label').html(fileName1);
+                                    });
+                                </script>
+
+                              <!-- Email's Subject -->
+                              <input type="hidden" name="_subject" value="Repair Model Form" />
+                              <input type="hidden" name="_cc" value="youssef.botros@mobileklinik.ca" />
+
+                              <button type="submit" class="btn btn-outline-danger" id="mkformbtn14">Submit</button>
+                              <button type="reset" class="btn btn-outline-danger" id="mkformbtn15">Reset</button>
+                          </form>
+                      </div> <!-- Repair Model Form closing div -->
+                  </div> <!-- myTabContent closing div -->
+              </div> <!-- reqForms closing div -->
+          </div> <!-- main closing div -->
+      </div> <!-- container closing div -->
+      <div class="darkMode">
+        <div class="custom-control custom-switch" data-toggle="tooltip" title="Dark Mode" data-placement="left">
+          <input type="checkbox" class="custom-control-input custom-switch" id="darkSwitch">
+          <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+      </div>
+      <footer class="footer">
+          <hr class="footer-line">
+          <div>
+            Created by: <a href="mailto:support@mktools.ca" data-toggle="popover" title="Approved Links" data-content="Click <a href='/pages/links.html'>here</a> for the approved links." data-original-title="Approved Links">Kerr Almario</a><br>
+            Mobile Klinik Professional Smartphone Repair
+            <ul>
+                <li><a href="https://mktools.glitch.me">HOME</a></li> |
+                <li><a href="/pages/forms.html">FORMS</a></li> |
+                <li><a href="/pages/links.html">LINKS</a></li> |
+                <li><a href="/pages/tools.html">TOOLS</a></li> |
+                <li><a href="/pages/stores.html">STORES</a></li> |
+                <li><a href="/pages/about.html">ABOUT</a></li>
+            </ul>
+          </div>
+      </footer>
+
+      <!--
+      <link rel="stylesheet" href="../css/snow.css"/>
+      <script src="/js/snow.js"></script>
+      <div id="snow"></div>
+      -->
+      
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5f835c974704467e89f68285/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+      <!--End of Tawk.to Script-->
+
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="/js/dark-mode-switch.min.js"></script>
+  </body>
+</html>
