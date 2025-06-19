@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: Lato, Calibri, sans-serif !important;
+    height: 100%;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.container {
+    min-height: calc(100vh - 200px) !important;
+    padding-bottom: 30px;
+}
+
+.header {
+    height: 100px;
+    padding-top: 30px;
+}
+
+.nav-line {
+    border:none;
+    max-width: 1420px;
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    border-bottom: 1px solid #bdbdbd;
+    box-shadow: 0 20px 20px -20px #333;
+    margin: -70px auto 50px; 
+}
+  
+.navi-link {
+    font-family: Lato;
+    font-size: 0.9em;
+    height: 100px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navi-link-3 {
+    display: none;
+}
+
+#openSidebarMenu {
+    display: none;
+}
+
+.navi-link img {
+    width: 120px;
+}
+  
+.navi-link ul {
+    float: right;
+    margin: auto 0;
+    line-height: 60px;
+}
+  
+.navi-link ul li {
+    display: inline;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.navi-link a {
+    color: #000;
+}
+
+.navi-link a:hover, .footer a:hover {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+
+/* Main Section */
+.main {
+    padding: 60px 0 0 0;
+    text-align: center;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.nav {
+    font-size: 0.87rem;
+}
+
+.nav-item {
+    width: 170px;
+}
+
+.nav-pills > li > a.active {
+    background-color: #EC5C51 !important;
+    color: white !important;
+}
+
+.nav-pills > li > a {
+    color: #000 !important;
+}
+
+.content-input {
+    width: 180px;
+    max-width: 800px;
+    border: 2px solid #313031;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+/* Removes the arrow on input number (start)*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* Removes the arrow on input number (end)*/
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+input[type="email"]:focus,
+textarea:focus,
+.col input[type="text"]:focus,
+.col input[type="number"]:focus,
+.col input[type="email"]:focus,
+.col select:focus, 
+.dsAddress input[type="text"]:focus,
+.col-md-6 input[type="text"]:focus,
+.col-md-6 input[type="number"]:focus,
+.col-md-6 input[type="email"]:focus,
+.form-group textarea:focus,
+.moneyTable .form-control:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.content-label input[type="text"], .content-label input[type="number"] {
+    padding-left: 50px;
+}
+
+.content-label i {
+    left: 0;
+    top: 8px;
+    padding: 9px 8px;
+    color: #313031;
+    transition: 0.3s;
+}
+
+.content-label input[type="text"]:focus + i, .content-label select:focus + i {
+    color: dodgerBlue;
+}
+
+.content-label.inputIconBg i {
+    background-color: #313031;
+    color: #ffffff;
+    padding: 9px 8px;
+    border-radius: 4px 0 0 4px;
+    line-height: inherit !important;
+    width: 40px;
+    text-align: center;
+    margin-right: -41px;
+    z-index: 1;
+}
+
+.content-label.inputIconBg input[type="text"]:focus + i,
+.content-label.inputIconBg input[type="number"]:focus + i {
+    color: #fff;
+    background-color: dodgerBlue;
+}
+
+.content-label {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.moneyTable {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#moneyCounter table {
+    width: 100%; /* to shrink the whole table */
+    border-spacing: 10px;
+    border-collapse: separate;
+    margin: 0 auto;
+}
+
+.moneyTable .form-control {
+    border: 2px solid #313031;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.moneyLabel {
+    margin: 0;
+}
+
+.moneyButton {
+    text-align: center !important; /* force the buttons to the center */
+}
+
+.moneyLabel th {
+    text-align: center;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row > .moneyBox {
+    margin: 0 5px;
+}
+
+.btnMC {
+    margin: 20px;
+    background-color: #EC5C51;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.btnMC:hover {
+    background-color: #E01616;
+}
+
+.btn {
+    width: 170px;
+    height: 50px;
+    margin: 10px 10px;
+}
+
+.deviceMN {
+    width: 400px !important;
+}
+
+.paybgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.paybgrid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+/* Pages/Forms Section */
+.reqforms.reqforms {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#customFile .custom-file-input:lang(en)::after {
+  content: "Select file...";
+}
+
+#customFile .custom-file-input:lang(en)::before {
+  content: "Click me";
+}
+
+/*when a value is selected, this class removes the content */
+.custom-file-input.selected:lang(en)::after {
+  content: "" !important;
+}
+
+.modal-backdrop
+{
+  opacity: 0.98 !important;
+}
+
+.askReq {
+  color: red;
+}
+
+.ppecontainer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ppeformbod {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.ppeform input[type="number"] {
+  width: 50px;
+}
+
+/* Main Section End */
+
+/* Pages/Links Section */
+.h3links {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #111111;
+  margin: 20px 0;
+  box-shadow: 4px 6px rgba(17, 17, 17, 0.1);
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.125);
+  height: 80px;
+}
+
+.card-header button, .card-header button:hover, .card-header button:focus {
+  text-decoration: none;
+  color: #000000;
+}
+
+.card-header .btn {
+  margin: auto 0;
+  text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.5);
+}
+
+.small-upper {
+  text-transform: uppercase;
+  font-size: .75em;
+}
+
+#headingOne button {
+  color: #dc3545;
+}
+
+#headingTwo button {
+  color: #007bff;
+}
+
+#headingThree button {
+  color: #ffc107;
+}
+
+#headingFour button {
+  color: #17a2b8;
+}
+
+#headingFive button {
+  color: #6c757d;
+}
+
+#headingSix button {
+  color: #28a745;
+}
+
+/* Pages/Links Section End */
+
+/* Pages/Barcodes Section */
+
+.barcode {
+  /* Use the name of the face that is installed, or the one you defined above */
+  font-family: 'Libre Barcode 39';
+  font-size: 42px; 
+}
+
+/* Pages/Barcodes Section End */
+
+/* About Section */
+
+
+/* About Section End */
+
+
+/* Footer Section */
+.footer-line {
+    border:none;
+    max-width: 1420px;
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    border-bottom: 1px solid #bdbdbd;
+    box-shadow: 0 20px 20px -20px #333;
+    margin: -50px auto 32px; 
+}
+
+.footer {
+    height: 50px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer ul li {
+    list-style: none;
+    display: inline;
+    padding: 0 5px;
+}
+
+.footer a {
+    color: #000000;
+}
+
+/* Footer Section End */
+
+
+/* https://codepen.io/plavookac/pen/qomrMw */
+@media only screen and (max-width: 600px) {
+  
+  .navi-link {
+    font-size: 0.5em;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+  
+  .navi-link-2 {
+    display: block;
+  }
+  
+  .navi-link-3 {
+    display: block;
+  }
+  
+  #sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
+  }
+  .sidebarMenuInner{
+      margin:0;
+      padding:0;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+  }
+  .sidebarMenuInner li{
+      list-style: none;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 20px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  }
+  .sidebarMenuInner li span{
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.50);
+  }
+  .sidebarMenuInner li a{
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  input[type="checkbox"]:checked ~ #sidebarMenu {
+      transform: translateX(0);
+  }
+
+  input[type=checkbox] {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      display: none;
+  }
+  .sidebarIconToggle {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      cursor: pointer;
+      position: absolute;
+      z-index: 99;
+      height: 100%;
+      width: 100%;
+      top: 22px;
+      left: 15px;
+      height: 22px;
+      width: 22px;
+  }
+  .spinner {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+  }
+  .horizontal {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+      margin-top: 3px;
+  }
+  .diagonal.part-1 {
+      position: relative;
+      transition: all 0.3s;
+      box-sizing: border-box;
+      float: left;
+  }
+  .diagonal.part-2 {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      position: relative;
+      float: left;
+      margin-top: 3px;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      opacity: 0;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      transform: rotate(135deg);
+      margin-top: 8px;
+  }
+  input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      transform: rotate(-135deg);
+      margin-top: -9px;
+  }
+}

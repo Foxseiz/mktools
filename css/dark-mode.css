@@ -1,0 +1,164 @@
+.darkMode {
+  position: fixed;
+  right: 0.1%;
+  bottom: 0.1%;
+	text-align:center;
+  font-size: 11px;
+}
+
+[data-theme="dark"] {
+  background-color: #111 !important;
+  color: #eee;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #eee !important;
+}
+
+[data-theme="dark"] .tooltip .tooltip-inner {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+[data-theme="dark"] .tooltip .arrow::before {
+  border-left-color: #fff !important;
+}
+
+[data-theme="dark"] a {
+  color: #fff;
+}
+
+[data-theme="dark"] .btn {
+  color: #fff;
+}
+
+[data-theme="dark"] .nav-link {
+  color: #fff !important;
+}
+
+[data-theme="dark"] .logo-img {
+  -webkit-filter: drop-shadow(1px 1px 1px #fff) drop-shadow(-0.05px -0.05px 0 #fff);
+  filter: drop-shadow(1px 1px 1px #fff) drop-shadow(-0.05px -0.05px 0 #fff); 
+}
+
+[data-theme="dark"] .content-label i {
+  background-color: #fff !important;
+  color: #111 !important;
+}
+
+[data-theme="dark"] .content-input {
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  background-color: #111 !important;
+}
+
+[data-theme="dark"] .moneyTable .form-control {
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  background-color: #111 !important;
+}
+
+[data-theme="dark"] .reqforms input[type="text"], 
+.reqforms input[type="file"], 
+.reqforms textarea,
+.bs-custom-file-input {
+  color: #000 !important;
+}
+
+[data-theme="dark"] .clear i {
+  color: #fff;
+}
+
+[data-theme="dark"] .content {
+  background-color: #111;
+  color: #fff;
+}
+
+[data-theme="dark"] .add-to-do i {
+  background-color: #111;
+  color: #fff;
+}
+
+[data-theme="dark"] .add-to-do input {
+  background-color: #111;
+  color: #fff;
+}
+
+[data-theme="dark"] .add-to-do input::placeholder {
+  background-color: #111;
+  color: #fff;
+}
+
+[data-theme="dark"] .item p.text {
+  background-color: #111;
+}
+
+[data-theme="dark"] .add-to-do {
+  background-color: #111;
+}
+
+[data-theme="dark"] .card {
+  border: 1px solid #fff;
+  box-shadow: 4px 6px rgba(2560, 256, 256, 0.1);
+}
+
+[data-theme="dark"] .card-header {
+  background-color: #111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+[data-theme="dark"] .card-header .btn {
+  text-shadow: 1px 1px 1px rgba(256, 256, 256, 0.2);
+}
+
+[data-theme="dark"] .card-header button:hover {
+  color: #fff;
+}
+
+[data-theme="dark"] .card-header button:focus {
+  color: #fff;
+}
+
+[data-theme="dark"] .card-body {
+  background-color: #111;
+}
+
+[data-theme="dark"] .btn-warning {
+  color: #000;
+}
+
+[data-theme="dark"] .bcode-body-bg {
+  color: #000;
+  background-color: #ccc;
+}
+
+/* forms modal login */
+[data-theme="dark"] .modal-content {
+  color: #000;
+}
+
+/* popover */
+[data-theme="dark"] .popover-header {
+  color: #000;
+}
+
+[data-theme="dark"] .popover-body a {
+  color: #0000EE;
+}
+
+/* mk stores */
+[data-theme="dark"] table.mk-stores {
+  color: #fff;
+}
+
+[data-theme="dark"] table.mk-stores a:link {
+  color: #2986cc;
+}
