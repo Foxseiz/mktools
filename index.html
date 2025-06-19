@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6826455170333557"
+     crossorigin="anonymous"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36315103-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-36315103-4');
+    </script>
+
+    <title>MK Tools</title>
+  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://cdn.glitch.global/221fa3eb-a4d2-40de-bff4-7796f7d5917c/favicon.ico?v=1679553923215" type="images/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/ed2e310181.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/dark-mode.css"/>
+  </head>
+  <body>
+      <header class="header">
+          <nav class="navi-link">
+              <a href="https://mktools.ca" alt="MK Tools">
+                <img class="logo-img" src="https://mobileklinik.ca/wp-content/themes/psc/images/logoNewEnglish.png"/>
+              </a>
+              <ul class="navi-link-2">
+                  <li><a href="https://mktools.ca/">Home</a></li>
+                  <li><a href="/pages/forms.html">Forms</a></li>
+                  <li><a href="/pages/tools.html">Tools</a></li>
+                  <li><a href="/pages/stores.html">Stores</a></li>
+                  <li><a href="/pages/about.html">About</a></li>
+              </ul>
+          </nav>
+          <hr class="nav-line"/>
+      </header>
+      <div class="container">
+          <div class="main">
+              <div class="nav-center">
+                  <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="special_order-tab" data-toggle="tab" href="#special_order" role="tab" aria-controls="special_order" aria-selected="true">Special Order Formula</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="money_counter-tab" data-toggle="tab" href="#money_counter" role="tab" aria-controls="money_counter" aria-selected="false">Cash Counter</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="model_Number-tab" data-toggle="tab" href="#model_Number" role="tab" aria-controls="model_Number" aria-selected="false">Find Model Number</a>
+                      </li>
+                      <!--
+                      <li class="nav-item">
+                          <a class="nav-link" id="price_list-tab" data-toggle="tab" href="#price_list" role="tab" aria-controls="price_list" aria-selected="false">Parts Price List</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" id="cpo_msrp-tab" data-toggle="tab" href="#cpo_msrp" role="tab" aria-controls="cpo_msrp" aria-selected="false">CPO MSRP</a>
+                      </li>
+                      -->
+                      <li class="nav-item">
+                          <a class="nav-link" id="payb_calc-tab" data-toggle="tab" href="#payb_calc" role="tab" aria-controls="payb_calc" aria-selected="false">PayBright Calculator</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="tab-content" id="myTabContent">
+                  <!-- Special Order -->
+                  <div class="tab-pane fade show active" id="special_order" role="tabpanel" aria-labelledby="special_order-tab">       
+                  <p><h4>Repair Price for Special Orders</h4></p>
+                  <i>If you want taxes to be included, please fill up the tax box.</i>
+                      <div id="content">
+                          <form id="calcForm" autocomplete="off">
+                              <div class="content-label inputIconBg">
+                                <input class="content-input" required type="text" pattern="[0-9]*" inputmode="numeric" id="cost" placeholder="Cost" />
+                                <i class="fas fa-dollar-sign" data-toggle="tooltip" title="Cost" data-placement="left"></i>
+                              </div>
+                              <div class="content-label inputIconBg">
+                                <input class="content-input" required type="text" pattern="[0-9]*" inputmode="numeric" id="margin" value="40" placeholder="Margin"/>
+                                <i class="fas fa-percent" data-toggle="tooltip" title="Margin" data-placement="left"></i>
+                              </div>
+                              <div class="content-label inputIconBg">
+                                <input class="content-input" required type="text" pattern="[0-9]*" inputmode="numeric" id="labor" value="35" placeholder="Labor"/>
+                                <i class="fas fa-hammer" data-toggle="tooltip" title="Labor" data-placement="left"></i>
+                              </div>
+                              <div class="content-label inputIconBg">
+                                <input class="content-input" required type="text" pattern="[0-9]*" inputmode="numeric" id="shipping" value="15" placeholder="Shipping"/>
+                                <i class="fas fa-truck" data-toggle="tooltip" title="Shipping" data-placement="left"></i>
+                              </div>
+                              <hr style="width: 180px; margin: 0 auto; height: 1px; background-color: rgba(255,255,255,0.3); box-shadow: 2px 2px 2px 2px #333 0.2;"/>
+                              <div class="content-label inputIconBg">
+                                <input class="content-input" required type="text" pattern="[0-9]*" inputmode="numeric" id="tax" value="" placeholder="Tax"/>
+                                <i class="fas fa-percent" data-toggle="tooltip" title="Tax" data-placement="left"></i>
+                              </div>
+                              <!--<input class="btn btn-outline-danger" id="calc" type="submit" onclick="calculate()" value="Calculate" disabled/>-->
+                          </form>              
+                      </div><br/>
+                  <p id="result"></p>
+                  </div>
+
+                  <!-- Money Counter -->
+                  <div class="tab-pane fade" id="money_counter" role="tabpanel" aria-labelledby="money_counter-tab">
+                      <p>
+                          <h4>Cash Counter</h4>
+                      </p>
+                      <p><!-- http://www.csgnetwork.com/moneycounter.html -->
+                          <div class="moneyTable">
+                              <form id="moneyCounter" name="MoneyForm">
+                                  <div class="form-row">
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="hun" class="moneyLabel">$100</label>
+                                      <input type="number" id="hun" class="form-control" name="hun" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="fif" class="moneyLabel">$50</label>
+                                      <input type="number" id="fif" class="form-control" name="fif" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="twe" class="moneyLabel">$20</label>
+                                      <input type="number" id="twe" class="form-control" name="twe" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="ten" class="moneyLabel">$10</label>
+                                      <input type="number" id="ten" class="form-control" name="ten" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="fiv" class="moneyLabel">$5</label>
+                                      <input type="number" id="fiv" class="form-control" name="fiv" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                  </div>
+                                
+                                  <div class="form-row">
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="two" class="moneyLabel">$2</label>
+                                      <input type="number" id="two" class="form-control" name="two" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="one" class="moneyLabel">$1</label>
+                                      <input type="number" id="one" class="form-control" name="one" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="qtr" class="moneyLabel">&cent;25</label>
+                                      <input type="number" id="qtr" class="form-control" name="qtr" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="dme" class="moneyLabel">&cent;10</label>
+                                      <input type="number" id="dme" class="form-control" name="dme" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                    <div class="col-sm-12 col-md moneyBox">
+                                      <label for="nck" class="moneyLabel">&cent;5</label>
+                                      <input type="number" id="nck" class="form-control" name="nck" value="0" onfocus="clear_field(this)">
+                                    </div>
+                                  </div>
+                                
+                                  <!-- Buttons -->
+                                  <div class="form-row">
+                                      <div class="col">
+                                        
+                                      </div>
+                                      <div class="col">
+                                        
+                                      </div>
+                                      <div class="col">
+                                        <input class="btn btn-outline-danger" id="calc1" type="button" name="calc1" value="Calculate" onclick="javascript:money(this.form)">
+                                      </div>
+                                      <div class="col">
+                                        <input class="btn btn-outline-danger" type="reset" value="Clear">
+                                      </div>
+                                      <div class="col">
+                                        
+                                      </div>
+                                      <div class="col">
+                                        
+                                      </div>
+                                  </div>
+                                
+                                  <!-- Results -->
+                                  <div class="form-row">
+                                    <div class="col-12 content-label inputIconBg">
+                                        <input class="content-input" type="text" name="total" placeholder="Counted Total" readonly>
+                                        <i class="fas fa-cash-register" data-toggle="tooltip" title="Counted Total" data-placement="left"></i>
+                                    </div>
+                                    <div class="col-12 content-label inputIconBg">
+                                        <input class="content-input" type="text" name="bills" placeholder="Bills Count" readonly>
+                                        <i class="fas fa-money-bill" data-toggle="tooltip" title="Number of Bills" data-placement="left"></i>
+                                    </div>
+                                    <div class="col-12 content-label inputIconBg">
+                                        <input class="content-input" type="text" name="coins" placeholder="Coins Count" readonly>
+                                        <i class="fas fa-coins" data-toggle="tooltip" title="Number of Coins" data-placement="left"></i>
+                                    </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </p>
+                  </div>
+
+                  <!-- Model Numbers -->
+                  <script src="/js/devices.js" defer></script>
+                  <div class="tab-pane fade" id="model_Number" role="tabpanel" aria-labelledby="model_Number-tab">
+                      <p><h4>Smartphone and Tablet Model Numbers</h4></p>
+                      <div class="content-label inputIconBg">
+                      <select class="content-input" name="device" id="device" style="width:350px;" onchange="changecat(this.value);">
+                          <option value="" disabled selected>Select Brand</option>
+                          <option value="A">Apple</option>
+                          <option value="B">Blackberry</option>
+                          <option value="G">Google</option>
+                          <option value="H">Huawei</option>
+                          <option value="L">LG</option>
+                          <option value="M">Motorola</option>
+                          <option value="S">Samsung</option>
+                      </select>
+                      </div>
+                      <div class="content-label inputIconBg">
+                      <select class="content-input" name="category" id="category" style="width:350px;" onchange="populateValue(this.value);">
+                          <option value="" disabled selected>Select Model</option>
+                      </select>
+                      </div>
+
+                      <div class="content-label inputIconBg">
+                      <input class="content-input" type="text" id="modelNumber" placeholder="Model Number" style="width:350px;" readonly />
+                      <i class="fas fa-mobile-alt" onclick="modelNumberCopy()" data-toggle="tooltip" title="Click icon to copy" data-placement="left"></i>
+                      </div>
+                  </div>
+  
+                  <!-- Price List 
+                  <script src="/js/pricelist.js" defer></script>
+                  <div class="tab-pane fade" id="price_list" role="tabpanel" aria-labelledby="price_list-tab">
+                      <p><h4>Parts Price List</h4></p>
+                      <i>Needs an update</i>
+                  -->
+                    <!--  
+                      <p></p>
+                      <div class="content-label inputIconBg">
+                        <select class="content-input" name="devicelist" id="devicelist" style="width:350px;" onchange="updateDrpL(this, 'brand');">
+                          <option value="" disabled selected>Select Brand</option>
+                          <option value="A">Apple</option>
+                          <option value="B">Blackberry</option>
+                          <option value="G">Google</option>
+                          <option value="H">Huawei</option>
+                          <option value="L">LG</option>
+                          <option value="M">Motorola</option>
+                          <option value="S">Samsung</option>
+                        </select>
+                      </div>
+  
+                      <div class="content-label inputIconBg">
+                        <select class="content-input" name="categorylist" id="categorylist" style="width:350px;" onchange="updateDrpL(this, 'cat');">
+                          <option value="" disabled selected>Select Model</option>
+                        </select>
+                      </div>
+                        
+                      <div class="content-label inputIconBg">
+                        <select class="content-input" name="partlist" id="partlist" style="width:350px;" onchange="updateDrpL(this.value, 'part');">
+                          <option value="" disabled selected>Select Part</option>
+                        </select>
+                      </div>
+                      
+                      <div class="content-label inputIconBg">
+                        <input class="content-input" type="text" id="pricelist" placeholder="Repair Price" style="width:350px;" readonly />
+                        <i class="fas fa-dollar-sign" data-toggle="tooltip" title="Cost" data-placement="left"></i>
+                      </div>
+                  </div>
+                  -->
+
+
+
+                  <!-- CPO MSRP 
+                  <script src="/js/cpomsrp.js" defer></script>
+                  <div class="tab-pane fade" id="cpo_msrp" role="tabpanel" aria-labelledby="cpo_msrp-tab">
+                      <p><h4>CPO MSRP</h4></p>
+                      <i>Updated: June 29, 2020</i>
+                  -->
+  
+                      <!--
+                      <p></p>
+                      <div class="content-label inputIconBg">
+                        <select class="content-input" name="cpodevicelist" id="cpodevicelist" style="width:350px;" onchange="updateDrp(this, 'brand');">
+                          <option value="" disabled selected>Select Brand</option>
+                          <option value="A">Apple</option>
+                          <option value="B">Blackberry</option>
+                          <option value="G">Google</option>
+                          <option value="H">Huawei</option>
+                          <option value="L">LG</option>
+                          <option value="M">Motorola</option>
+                          <option value="S">Samsung</option>
+                        </select>
+                      </div>
+  
+                      <div class="content-label inputIconBg" id="msrpcat">
+                        <select class="content-input" name="cpocategorylist" id="cpocategorylist" style="width:350px;" onchange="updateDrp(this, 'cat');">
+                          <option value="" disabled selected>Select Model</option>
+                        </select>
+                      </div>
+                        
+                      <div class="content-label inputIconBg" id="msrpstorage">
+                        <select class="content-input" name="storage" id="cpostoragelist" style="width:350px;" onchange="updateDrp(this.value, 'storage');">
+                          <option value="" disabled selected>Select Storage</option>
+                        </select>
+                      </div>
+                      
+                      <div class="content-label inputIconBg" id="msrpprice">
+                        <input class="content-input" type="text" id="cpopricelist" placeholder="CPO Price" style="width:350px;" readonly />
+                        <i class="fas fa-dollar-sign" id="msrpdollar" data-toggle="tooltip" title="Cost" data-placement="left"></i>
+                      </div>
+                  </div>
+                  -->
+
+                  <!-- PayBright Calculator -->
+                  <script src="/js/paycalc.js" defer></script>
+                  <div class="tab-pane fade" id="payb_calc" role="tabpanel" aria-labelledby="payb_calc-tab">
+                      <p><h4>Paybright Calculator</h4></p>
+                      <p style="color: red">
+                        The "As Low As" price includes <b>ALL TAXES AND APPLICABLE FEES!</b> <br/>
+                        It's important for your customer to know that this is an "all-inclusive" price.
+                      </p>
+                      <div class="content-label inputIconBg">
+                          <select class="content-input" name="paybright" id="paybright" style="width:350px;">
+                              <option value="" disabled selected>Select Province</option>
+                              <option value="1">Alberta</option>
+                              <option value="2">British Columbia</option>
+                              <option value="3">Manitoba</option>
+                              <option value="4">New Brunswick</option>
+                              <option value="5">Newfoundland and Labrador</option>
+                              <option value="6">Northwest Territories</option>
+                              <option value="7">Nova Scotia</option>
+                              <option value="8">Nunavut</option>
+                              <option value="9">Ontario</option>
+                              <option value="10">Prince Edward Island</option>
+                              <option value="11">Quebec</option>
+                              <option value="12">Saskatchewan</option>
+                              <option value="13">Yukon</option>
+                          </select>
+                      </div>
+                      <div class="content-label inputIconBg">
+                          <input class="content-input" type="text" name="paytax" id="paytax" placeholder="Tax Percentage" style="width:350px;" onchange="populateTax(this.value);" readonly/>
+                          <i class="fas fa-percent" data-toggle="tooltip" title="Tax" data-placement="left"></i>
+                      </div>
+                      <div class="content-label inputIconBg" id="payprice">
+                        <input class="content-input" type="number" id="paybprice" placeholder="Device Price" style="width:350px;" />
+                        <i class="fas fa-dollar-sign" data-toggle="tooltip" title="Cost" data-placement="left"></i>
+                      </div>
+                      <div class="content-label inputIconBg" id="payplan">
+                        <input class="content-input" type="number" id="paybplan" placeholder="(Optional) Plan" style="width:350px;" />
+                        <i class="fas fa-dollar-sign" data-toggle="tooltip" title="Plan" data-placement="left"></i>
+                      </div>
+                      <div class="content-label inputIconBg" id="payacc">
+                        <input class="content-input" type="number" id="paybacc" placeholder="(Optional) Accessories" style="width:350px;" />
+                        <i class="fas fa-dollar-sign" data-toggle="tooltip" title="Accessories" data-placement="left"></i>
+                      </div>
+
+                      <div style="margin: 20px;"></div>
+
+                      <!--
+                      <div class="paybgrid">
+                          <div>
+                            <label for="sixmos" class="">6 Months</label>
+                            <div class="content-label inputIconBg">
+                                <input type="text" id="sixmos" class="content-input" name="sixmos" value="$0" style="width:350px;" readonly />
+                                <i class="fas fa-dollar-sign" data-toggle="tooltip" title="Per month for 6 months" data-placement="left"></i>
+                            </div>
+                          </div>
+                          
+                          <div>
+                            <label for="twemos" class="">12 Months</label>
+                            <div class="content-label inputIconBg">
+                                <input type="text" id="twemos" class="content-input" name="twemos" value="$0" style="width:350px;" readonly />
+                                <i class="fas fa-dollar-sign" data-toggle="tooltip" title="Per month for 12 months" data-placement="left"></i>
+                            </div>
+                          </div>
+                      </div>
+                      -->
+                      <div style="margin: 20px;"></div>
+
+                      <div>
+                        <label for="twemos" class="">As Low As</label>
+                        <div class="content-label inputIconBg">
+                            <input type="text" id="aslowas" class="content-input" name="aslowas" value="$0" style="width:350px;" readonly />
+                            <i class="fas fa-dollar-sign" data-toggle="tooltip" title="As low as per month" data-placement="left"></i>
+                        </div>
+                      </div>
+
+                  </div>
+
+              </div>
+          </div>
+      </div>
+      <div class="darkMode">
+        <div class="custom-control custom-switch" data-toggle="tooltip" title="Dark Mode" data-placement="left">
+          <input type="checkbox" class="custom-control-input custom-switch" id="darkSwitch">
+          <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+      </div>
+      <footer class="footer">
+          <hr class="footer-line">
+          <div>
+            Created by: <a href="mailto:support@mktools.ca" data-toggle="popover" title="Approved Links" data-content="Click <a href='/pages/links.html'>here</a> for the approved links." data-original-title="Approved Links">Kerr Almario</a><br>
+            Mobile Klinik Professional Smartphone Repair
+            <ul>
+                <li><a href="https://mktools.glitch.me">HOME</a></li> |
+                <li><a href="/pages/forms.html">FORMS</a></li> |
+                <li><a href="/pages/tools.html">TOOLS</a></li> |
+                <li><a href="/pages/stores.html">STORES</a></li> |
+                <li><a href="/pages/about.html">ABOUT</a></li>
+            </ul>
+          </div>
+      </footer>
+
+      <!--
+      <link rel="stylesheet" href="../css/snow.css"/>
+      <script src="/js/snow.js"></script>
+      <div id="snow"></div>
+      -->
+
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5f835c974704467e89f68285/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+      <!--End of Tawk.to Script-->
+      
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="/js/dark-mode-switch.min.js"></script>
+  </body>
+</html>
